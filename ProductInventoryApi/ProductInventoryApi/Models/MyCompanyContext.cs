@@ -19,7 +19,7 @@ namespace ProductInventoryApi.Models
 
         public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<Inventory> Inventories { get; set; }
-        public virtual DbSet<InventoryDate> InventoryDates { get; set; }
+        public virtual DbSet<InventoryDateLocation> InventoryDateLocations { get; set; }
         public virtual DbSet<InventoryLocation> InventoryLocations { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductItem> ProductItems { get; set; }
@@ -41,69 +41,77 @@ namespace ProductInventoryApi.Models
             {
                 entity.ToTable("Company");
 
+                entity.HasIndex(e => e.CompanyPrefix, "UQ__Company__C2281033CA6534FB")
+                    .IsUnique();
+
                 entity.Property(e => e.CompanyName)
                     .IsRequired()
+                    .HasMaxLength(512)
                     .IsUnicode(false);
-
-                entity.Property(e => e.CompanyPrefix).HasColumnType("numeric(18, 0)");
             });
 
             modelBuilder.Entity<Inventory>(entity =>
             {
                 entity.ToTable("Inventory");
 
+                entity.HasIndex(e => e.InventoryId, "UQ__Inventor__F5FDE6B23654FF0C")
+                    .IsUnique();
+
                 entity.Property(e => e.InventoryId)
                     .IsRequired()
                     .HasMaxLength(32)
                     .IsUnicode(false);
-
-                entity.Property(e => e.InventoryLocationId).HasColumnName("InventoryLocation_Id");
-
-                entity.HasOne(d => d.InventoryLocation)
-                    .WithMany(p => p.Inventories)
-                    .HasForeignKey(d => d.InventoryLocationId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Inventory_InventoryLocation");
             });
 
-            modelBuilder.Entity<InventoryDate>(entity =>
+            modelBuilder.Entity<InventoryDateLocation>(entity =>
             {
-                entity.ToTable("InventoryDate");
+                entity.ToTable("InventoryDateLocation");
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.InventoryDate1).HasColumnName("InventoryDate");
+                entity.HasIndex(e => new { e.InventoryId, e.InventoryDate, e.InventoryLocationId }, "UQ__Inventor__C4422681C1203420")
+                    .IsUnique();
 
                 entity.Property(e => e.InventoryId).HasColumnName("Inventory_Id");
 
+                entity.Property(e => e.InventoryLocationId).HasColumnName("InventoryLocation_Id");
+
                 entity.HasOne(d => d.Inventory)
-                    .WithMany(p => p.InventoryDates)
+                    .WithMany(p => p.InventoryDateLocations)
                     .HasForeignKey(d => d.InventoryId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_InventoryDate_Inventory");
+                    .HasConstraintName("FK_InventoryDateLocation_Inventory");
+
+                entity.HasOne(d => d.InventoryLocation)
+                    .WithMany(p => p.InventoryDateLocations)
+                    .HasForeignKey(d => d.InventoryLocationId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_InventoryDateLocation_InventoryLocation");
             });
 
             modelBuilder.Entity<InventoryLocation>(entity =>
             {
                 entity.ToTable("InventoryLocation");
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasIndex(e => e.InventoryLocationName, "UQ__Inventor__EC750B4FCED41B54")
+                    .IsUnique();
 
-                entity.Property(e => e.InventoryLocation1)
+                entity.Property(e => e.InventoryLocationName)
                     .IsRequired()
                     .HasMaxLength(512)
-                    .IsUnicode(false)
-                    .HasColumnName("InventoryLocation");
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.ToTable("Product");
 
+                entity.HasIndex(e => new { e.CompanyId, e.ItemReference }, "UQ__Product__12045DE22D81EEB1")
+                    .IsUnique();
+
                 entity.Property(e => e.CompanyId).HasColumnName("Company_Id");
 
                 entity.Property(e => e.ProductName)
                     .IsRequired()
+                    .HasMaxLength(512)
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Company)
@@ -117,26 +125,22 @@ namespace ProductInventoryApi.Models
             {
                 entity.ToTable("ProductItem");
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasIndex(e => new { e.ProductId, e.InventoryDateLocationId, e.SerialNumber }, "UQ__ProductI__6B86F9ABA142D6C8")
+                    .IsUnique();
 
-                entity.Property(e => e.InventoryId).HasColumnName("Inventory_Id");
+                entity.Property(e => e.InventoryDateLocationId).HasColumnName("InventoryDateLocation_Id");
 
-                entity.Property(e => e.ProductDateId).HasColumnName("ProductDate_Id");
+                entity.Property(e => e.ProductId).HasColumnName("Product_Id");
 
-                entity.Property(e => e.SerialNumber)
-                    .IsRequired()
-                    .HasMaxLength(512)
-                    .IsUnicode(false);
-
-                entity.HasOne(d => d.Inventory)
+                entity.HasOne(d => d.InventoryDateLocation)
                     .WithMany(p => p.ProductItems)
-                    .HasForeignKey(d => d.InventoryId)
+                    .HasForeignKey(d => d.InventoryDateLocationId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_ProductItem_InventoryDate");
+                    .HasConstraintName("FK_ProductItem_InventoryDateLocation");
 
-                entity.HasOne(d => d.ProductDate)
+                entity.HasOne(d => d.Product)
                     .WithMany(p => p.ProductItems)
-                    .HasForeignKey(d => d.ProductDateId)
+                    .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_ProductItem_Product");
             });

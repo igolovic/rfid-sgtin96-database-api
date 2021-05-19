@@ -13,7 +13,7 @@ namespace ProductInventoryApi.Models
         }
 
         public int Id { get; set; }
-        public decimal CompanyPrefix { get; set; }
+        public long CompanyPrefix { get; set; }
         public string CompanyName { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }

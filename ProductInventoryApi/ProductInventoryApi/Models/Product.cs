@@ -14,7 +14,7 @@ namespace ProductInventoryApi.Models
 
         public int Id { get; set; }
         public int CompanyId { get; set; }
-        public int ItemReference { get; set; }
+        public long ItemReference { get; set; }
         public string ProductName { get; set; }
 
         public virtual Company Company { get; set; }

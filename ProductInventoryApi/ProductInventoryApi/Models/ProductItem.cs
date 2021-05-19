@@ -8,11 +8,11 @@ namespace ProductInventoryApi.Models
     public partial class ProductItem
     {
         public int Id { get; set; }
-        public int ProductDateId { get; set; }
-        public int InventoryId { get; set; }
-        public string SerialNumber { get; set; }
+        public int ProductId { get; set; }
+        public int InventoryDateLocationId { get; set; }
+        public long SerialNumber { get; set; }
 
-        public virtual InventoryDate Inventory { get; set; }
-        public virtual Product ProductDate { get; set; }
+        public virtual InventoryDateLocation InventoryDateLocation { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

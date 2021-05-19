@@ -9,12 +9,12 @@ namespace ProductInventoryApi.Models
     {
         public InventoryLocation()
         {
-            Inventories = new HashSet<Inventory>();
+            InventoryDateLocations = new HashSet<InventoryDateLocation>();
         }
 
         public int Id { get; set; }
-        public string InventoryLocation1 { get; set; }
+        public string InventoryLocationName { get; set; }
 
-        public virtual ICollection<Inventory> Inventories { get; set; }
+        public virtual ICollection<InventoryDateLocation> InventoryDateLocations { get; set; }
     }
 }
