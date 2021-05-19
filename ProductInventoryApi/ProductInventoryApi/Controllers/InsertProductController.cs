@@ -1,17 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Linq;
+using System.Net;
+using System.Text.Json;
+
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-using Microsoft.Extensions.Logging;
+
 using ProductInventoryApi.Localize;
 using ProductInventoryApi.Models;
 using ProductInventoryApi.Models.PostedObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
+
 
 namespace ProductInventoryApi.Controllers
 {
@@ -36,52 +34,14 @@ namespace ProductInventoryApi.Controllers
         {
             try
             {
-                var company = (from c in context.Companies
-                               where c.CompanyPrefix == value.CompanyPrefix
-                               select c)
-                               .SingleOrDefault();
-
-                if (company == null)
-                {
-                    // Insert company if it doesn't already exist
-                    company = new Company
-                    {
-                        CompanyPrefix = value.CompanyPrefix,
-                        CompanyName = value.CompanyName,
-                    };
-                    context.Companies.Add(company);
-                }
-
-                var product = (from p in context.Products
-                               where p.CompanyId == company.Id && p.ItemReference == value.ItemReference
-                               select p)
-                               .SingleOrDefault();
-
-                if (product == null)
-                {
-                    // Insert product
-                    product = new Product
-                    {
-                        Company = company,
-                        ItemReference = value.ItemReference,
-                        ProductName = value.ProductName
-                    };
-                    context.Products.Add(product);
-                }
-                else
-                    // Throw error if product already exists
-                    throw new InvalidOperationException(localizer["Error_ProductExists"]);
-
-                context.SaveChanges();
+                InsertProduct(value);
 
                 var responseData = new { Message = localizer["ProductInserted"].Value };
-                string jsonString = JsonSerializer.Serialize(responseData);
-
                 var result = new ContentResult()
                 {
                     StatusCode = (int)HttpStatusCode.OK,
                     ContentType = "application/json",
-                    Content = jsonString
+                    Content = JsonSerializer.Serialize(responseData)
                 };
 
                 return result;
@@ -91,6 +51,47 @@ namespace ProductInventoryApi.Controllers
                 logger.LogError(ex);
                 throw;
             }
+        }
+
+        private void InsertProduct(PostedProduct value)
+        {
+            var company = (from c in context.Companies
+                           where c.CompanyPrefix == value.CompanyPrefix
+                           select c)
+                           .SingleOrDefault();
+
+            if (company == null)
+            {
+                // Insert company if it doesn't already exist
+                company = new Company
+                {
+                    CompanyPrefix = value.CompanyPrefix,
+                    CompanyName = value.CompanyName,
+                };
+                context.Companies.Add(company);
+            }
+
+            var product = (from p in context.Products
+                           where p.CompanyId == company.Id && p.ItemReference == value.ItemReference
+                           select p)
+                           .SingleOrDefault();
+
+            if (product == null)
+            {
+                // Insert product
+                product = new Product
+                {
+                    Company = company,
+                    ItemReference = value.ItemReference,
+                    ProductName = value.ProductName
+                };
+                context.Products.Add(product);
+            }
+            else
+                // Throw error if product already exists
+                throw new InvalidOperationException(localizer["Error_ProductExists"]);
+
+            context.SaveChanges();
         }
     }
 }
