@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\IG\\Src\\sen-imp-assign\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj": {}
+    "C:\\IG\\Src\\rfid-sgtin96-database-api\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj": {}
   },
   "projects": {
-    "C:\\IG\\Src\\sen-imp-assign\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj": {
+    "C:\\IG\\Src\\rfid-sgtin96-database-api\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\IG\\Src\\sen-imp-assign\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj",
+        "projectUniqueName": "C:\\IG\\Src\\rfid-sgtin96-database-api\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj",
         "projectName": "ProductInventoryApi",
-        "projectPath": "C:\\IG\\Src\\sen-imp-assign\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj",
+        "projectPath": "C:\\IG\\Src\\rfid-sgtin96-database-api\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj",
         "packagesPath": "C:\\Users\\ig\\.nuget\\packages\\",
-        "outputPath": "C:\\IG\\Src\\sen-imp-assign\\ProductInventoryApi\\ProductInventoryApi\\obj\\",
+        "outputPath": "C:\\IG\\Src\\rfid-sgtin96-database-api\\ProductInventoryApi\\ProductInventoryApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

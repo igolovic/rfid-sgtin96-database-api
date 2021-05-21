@@ -8,10 +8,6 @@ namespace ProductInventoryApi.Models
 {
     public partial class MyCompanyContext : DbContext
     {
-        public MyCompanyContext()
-        {
-        }
-
         public MyCompanyContext(DbContextOptions<MyCompanyContext> options)
             : base(options)
         {
@@ -23,13 +19,14 @@ namespace ProductInventoryApi.Models
         public virtual DbSet<InventoryLocation> InventoryLocations { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductItem> ProductItems { get; set; }
+        public virtual DbSet<VCountOfInventoriedItemsGroupedBySpecificCompany> VCountOfInventoriedItemsGroupedBySpecificCompanies { get; set; }
+        public virtual DbSet<VCountOfInventoriedItemsGroupedBySpecificProductForSpecificInventory> VCountOfInventoriedItemsGroupedBySpecificProductForSpecificInventories { get; set; }
+        public virtual DbSet<VCountOfInventoriedItemsGroupedBySpecificProductPerDay> VCountOfInventoriedItemsGroupedBySpecificProductPerDays { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=IGNB\\IVANINSTANCE;Database=MyCompany;Trusted_Connection=True;");
             }
         }
 
@@ -143,6 +140,47 @@ namespace ProductInventoryApi.Models
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_ProductItem_Product");
+            });
+
+            modelBuilder.Entity<VCountOfInventoriedItemsGroupedBySpecificCompany>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("v_CountOfInventoriedItemsGroupedBySpecificCompany");
+
+                entity.Property(e => e.CompanyName)
+                    .IsRequired()
+                    .HasMaxLength(512)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<VCountOfInventoriedItemsGroupedBySpecificProductForSpecificInventory>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("v_CountOfInventoriedItemsGroupedBySpecificProductForSpecificInventory");
+
+                entity.Property(e => e.InventoryId)
+                    .IsRequired()
+                    .HasMaxLength(32)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ProductName)
+                    .IsRequired()
+                    .HasMaxLength(512)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<VCountOfInventoriedItemsGroupedBySpecificProductPerDay>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("v_CountOfInventoriedItemsGroupedBySpecificProductPerDay");
+
+                entity.Property(e => e.ProductName)
+                    .IsRequired()
+                    .HasMaxLength(512)
+                    .IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);

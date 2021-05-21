@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace ProductInventoryApi.Models.PostedObjects
+namespace ProductInventoryApi.Models.RequestObjects
 {
-    public class PostedInventory
+    public class RequestInventory
     {
         [RegularExpression("([a-zA-Z0-9]{1,32})", ErrorMessage = "Information must be 32 characters which can be letters or numbers")]
         public string InventoryId { get; set; }
@@ -20,8 +18,8 @@ namespace ProductInventoryApi.Models.PostedObjects
         public DateTime InventoryDate { get; set; }
         
         /// <summary>
-        /// SGTIN-96 item list
+        /// Hexadecimal RFID tags list. Tags should contain SGTIN-96 data which represents product items.
         /// </summary>
-        public List<string> SgtinItems { get; set; }
+        public List<string> HexRfidTags { get; set; }
     }
 }

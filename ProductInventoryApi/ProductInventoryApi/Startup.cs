@@ -36,7 +36,7 @@ namespace ProductInventoryApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Logging - read configuration
+            // Logging
             LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 
             services.AddControllers();
@@ -60,7 +60,7 @@ namespace ProductInventoryApi
                     options.SupportedUICultures = supportedCultures;
                 });
 
-            // Logging - configure error and information logging
+            // Logging
             services.ConfigureLoggerService();
 
             services.AddDbContext<MyCompanyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ProjectDatabase")));
@@ -76,7 +76,8 @@ namespace ProductInventoryApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProductInventoryApi v1"));
             }
 
-            // Manage returned error message - it shouldn't reveal technical details
+            // Manage returned error message (e.g. caused by exception) - it shouldn't reveal technical details,
+            // must be called before UseRouting (?)
             app.UseExceptionHandler(c => c.Run(async context =>
             {
                 var exception = context.Features

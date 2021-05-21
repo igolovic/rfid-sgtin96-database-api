@@ -6,31 +6,35 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
-using ProductInventoryApi.Localize;
+using ProductInventoryApi.Logging;
+using ProductInventoryApi.Localization;
 using ProductInventoryApi.Models;
-using ProductInventoryApi.Models.PostedObjects;
-
+using ProductInventoryApi.Models.RequestObjects;
 
 namespace ProductInventoryApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class InsertProductController : ControllerBase
+    public class ProductController : ControllerBase
     {
         private readonly MyCompanyContext context;
         private readonly IStringLocalizer<Resource> localizer;
         private readonly ILoggerManager logger;
 
-        public InsertProductController(IStringLocalizer<Resource> localizer, ILoggerManager logger, MyCompanyContext context)
+        public ProductController(IStringLocalizer<Resource> localizer, ILoggerManager logger, MyCompanyContext context)
         {
             this.context = context;
             this.localizer = localizer;
             this.logger = logger;
         }
 
-        // POST api/<InsertProductController>
+        /// <summary>
+        /// Insert company and product data into database
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         [HttpPost]
-        public ActionResult Post([FromBody] PostedProduct value)
+        public ActionResult Post([FromBody] RequestProduct value)
         {
             try
             {
@@ -53,7 +57,7 @@ namespace ProductInventoryApi.Controllers
             }
         }
 
-        private void InsertProduct(PostedProduct value)
+        private void InsertProduct(RequestProduct value)
         {
             var company = (from c in context.Companies
                            where c.CompanyPrefix == value.CompanyPrefix

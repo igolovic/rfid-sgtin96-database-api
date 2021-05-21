@@ -1,7 +1,7 @@
-﻿using NLog;
-using System;
+﻿using System;
+using NLog;
 
-namespace ProductInventoryApi
+namespace ProductInventoryApi.Logging
 {
     public class LoggerManager : ILoggerManager
     {

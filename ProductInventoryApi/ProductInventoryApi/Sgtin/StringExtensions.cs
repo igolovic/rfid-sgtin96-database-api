@@ -3,15 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ProductInventoryApi.Sgtin
 {
     public static class StringExtensions
     {
-        public static bool TryParseSgtin96Item(this string sgtin, out EnumHeader header, out EnumFilter filter, out EnumPartition partition, out long companyPrefix, out long itemReference, out long serialNumber, out string errorMessage)
+        /// <summary>
+        /// Method that tries to parse SGTIN-96 data from 24 hexadecimal digit RFID tag
+        /// </summary>
+        /// <param name="hexRfidTag">24 hexadecimal digit (96-bit) RFID tag containing SGTIN-96 data encoded</param>
+        /// <param name="header">3-bit header value from SGTIN-96</param>
+        /// <param name="filter">3-bit filter value from SGTIN-96</param>
+        /// <param name="partition">8-bit partition value from SGTIN-96</param>
+        /// <param name="companyPrefix">20–40-bit variable-length company-prefix value from SGTIN-96 (determined by partition)</param>
+        /// <param name="itemReference">24-4-bit variable-length itemreference value from SGTIN-96 (determined by partition)</param>
+        /// <param name="serialNumber">38-bit serial number</param>
+        /// <param name="errorMessage">Error description, if error encountered during parsing</param>
+        /// <returns></returns>
+        public static bool TryParseSgtin96(this string hexRfidTag, out EnumHeader header, out EnumFilter filter, out EnumPartition partition, out long companyPrefix, out long itemReference, out long serialNumber, out string errorMessage)
         {
             header = default(EnumHeader);
             filter = default(EnumFilter);
@@ -21,20 +30,20 @@ namespace ProductInventoryApi.Sgtin
             serialNumber = default(long);
             errorMessage = null;
 
-            // 2 hex digits = 1 byte, 24 hex digits = 12 bytes = 96 bits
-            if (sgtin.Length != 24)
+            // RFID hexadecimal tags should be 24 digits (24 hex digits = 12 bytes = 96 bits)
+            if (hexRfidTag.Length != 24)
             {
                 errorMessage = "SGTIN-96 length not 96 bits";
                 return false;
             }
 
-            if (IsHex(sgtin) == false)
+            if (IsHex(hexRfidTag) == false)
             {
                 errorMessage = "SGTIN-96 not valid hexadecimal";
                 return false;
             }
 
-            BitArray sgtinBitArr = HexStringToBitArray(sgtin);
+            BitArray sgtinBitArr = HexStringToBitArray(hexRfidTag);
             int bitsRead = 0;
 
             BitArray headerBitArr = new BitArray(sgtinBitArr.Cast<bool>().Take(8).ToArray());
@@ -114,6 +123,11 @@ namespace ProductInventoryApi.Sgtin
             return true;
         }
 
+        /// <summary>
+        /// Convert string of hexadecimal digits into BitArray
+        /// </summary>
+        /// <param name="hexData"></param>
+        /// <returns></returns>
         private static BitArray HexStringToBitArray(string hexData)
         {
             BitArray ba = new BitArray(4 * hexData.Length);
@@ -126,6 +140,11 @@ namespace ProductInventoryApi.Sgtin
             return ba;
         }
 
+        /// <summary>
+        /// Check if string contains only hexadecimal digits
+        /// </summary>
+        /// <param name="chars"></param>
+        /// <returns></returns>
         private static bool IsHex(IEnumerable<char> chars)
         {
             bool isHex;

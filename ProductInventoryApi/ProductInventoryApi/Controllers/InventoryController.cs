@@ -1,23 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ProductInventoryApi.Models;
-using ProductInventoryApi.Models.PostedObjects;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using ProductInventoryApi.Sgtin;
-using System.Net.Http;
 using System.Net;
-using System.Text;
 using System.Text.Json;
+
+using ProductInventoryApi.Localization;
+using ProductInventoryApi.Logging;
+using ProductInventoryApi.Models;
+using ProductInventoryApi.Models.RequestObjects;
+using ProductInventoryApi.Models.ResponseObjects;
+using ProductInventoryApi.Sgtin;
+
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-using ProductInventoryApi.Localize;
 
 namespace ProductInventoryApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UpsertInventoryController : ControllerBase
+    public class InventoryController : ControllerBase
     {
         private readonly MyCompanyContext context;
         private readonly IStringLocalizer<Resource> localizer;
@@ -27,16 +28,57 @@ namespace ProductInventoryApi.Controllers
         private Func<long, long, long, string> createCompanyProductSerialIdentifier = (companyPrefix, itemReference, serialNumber) => $"{companyPrefix}-{itemReference}-{serialNumber}";
         private Func<string, string, string> createErrorMessage = (sgtin, message) => $"{sgtin} - {message}";
 
-        public UpsertInventoryController(IStringLocalizer<Resource> localizer, ILoggerManager logger, MyCompanyContext context)
+        public InventoryController(IStringLocalizer<Resource> localizer, ILoggerManager logger, MyCompanyContext context)
         {
             this.context = context;
             this.localizer = localizer;
             this.logger = logger;
         }
 
-        // POST api/<UpsertInventoryController>
+        /// <summary>
+        /// Return report data which consists of counts of product items grouped according to various criteria
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public ResponseReport Get()
+        {
+            try
+            {
+                var itemsGroupedBySpecificProductForSpecificInventories = from row in context.VCountOfInventoriedItemsGroupedBySpecificProductForSpecificInventories
+                                                                          orderby row.InventoryId, row.CountOfProductItems descending, row.ProductName 
+                                                                          select row;
+
+                var itemsGroupedBySpecificProductPerDays = from row in context.VCountOfInventoriedItemsGroupedBySpecificProductPerDays
+                                                           orderby row.InventoryDate, row.CountOfProductItems descending, row.ProductName 
+                                                           select row;
+
+                var itemsGroupedBySpecificCompanies = from row in context.VCountOfInventoriedItemsGroupedBySpecificCompanies
+                                                      orderby row.CountOfProductItems descending
+                                                      select row;
+
+                var resultData = new ResponseReport
+                {
+                    ItemsGroupedBySpecificProductForSpecificInventories = itemsGroupedBySpecificProductForSpecificInventories.ToList(),
+                    ItemsGroupedBySpecificProductPerDays = itemsGroupedBySpecificProductPerDays.ToList(),
+                    ItemsGroupedBySpecificCompanies = itemsGroupedBySpecificCompanies.ToList()
+                };
+
+                return resultData;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Insert or update inventory and inventory-related data, and product items into database
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         [HttpPost]
-        public ActionResult Post([FromBody] PostedInventory value)
+        public ActionResult Post([FromBody] RequestInventory value)
         {
             try
             {
@@ -78,15 +120,17 @@ namespace ProductInventoryApi.Controllers
                                              select idl)
                                              .SingleOrDefault();
 
-                EnumOperationType operationType = inventoryDateLocation == null ? EnumOperationType.Insert : EnumOperationType.Update;
+                EnumDataMode dataMode = inventoryDateLocation == null ? EnumDataMode.InsertAndReturnData : EnumDataMode.ReturnData;
 
                 Dictionary<string, ProductItem> createdProductItems = null;
                 List<string> errorItems = new List<string>(), updateInsertedItems = new List<string>(), updateDeletedItems = new List<string>();
-                if (operationType == EnumOperationType.Insert)
-                    CreateInventoryDateLocation(EnumOperationType.Insert, value, out countProductItemsReceived, ref countProductItemsParseError, ref countProductItemsNotInDatabase, ref countProductItemsDuplicated, inventoryLocation, inventory, ref inventoryDateLocation, out createdProductItems, errorItems);
+                if (dataMode == EnumDataMode.InsertAndReturnData)
+                    // Insert new inventory-date-location record and product items into database
+                    CreateInventoryDateLocation(EnumDataMode.InsertAndReturnData, value, out countProductItemsReceived, ref countProductItemsParseError, ref countProductItemsNotInDatabase, ref countProductItemsDuplicated, inventoryLocation, inventory, ref inventoryDateLocation, out createdProductItems, errorItems);
                 else
                 {
-                    CreateInventoryDateLocation(EnumOperationType.Update, value, out countProductItemsReceived, ref countProductItemsParseError, ref countProductItemsNotInDatabase, ref countProductItemsDuplicated, inventoryLocation, inventory, ref inventoryDateLocation, out createdProductItems, errorItems);
+                    // Inventory-date-location record already exists, only update product items (add/delete existing product items) related to inventory-date-location record
+                    CreateInventoryDateLocation(EnumDataMode.ReturnData, value, out countProductItemsReceived, ref countProductItemsParseError, ref countProductItemsNotInDatabase, ref countProductItemsDuplicated, inventoryLocation, inventory, ref inventoryDateLocation, out createdProductItems, errorItems);
 
                     var existingProductItems = (from idl in context.InventoryDateLocations
                                                 join pi in context.ProductItems on idl.Id equals pi.InventoryDateLocationId
@@ -118,7 +162,7 @@ namespace ProductInventoryApi.Controllers
 
                 var resultData = new
                 {
-                    OperationType = Enum.GetName(operationType),
+                    OperationType = Enum.GetName(dataMode),
                     CountProductItemsReceived = countProductItemsReceived,
                     CountProductItemsParseError = countProductItemsParseError,
                     CountProductItemsNotInDatabase = countProductItemsNotInDatabase,
@@ -145,7 +189,24 @@ namespace ProductInventoryApi.Controllers
             }
         }
 
-        private void CreateInventoryDateLocation(EnumOperationType operationType, PostedInventory value, out int countProductItemsReceived, ref int countProductItemsParseError, ref int countProductItemsNotInDatabase, ref int countProductItemsDuplicated, InventoryLocation inventoryLocation, Inventory inventory, ref InventoryDateLocation inventoryDateLocation, out Dictionary<string, ProductItem> createdProductItems, List<string> errorItems)
+        /// <summary>
+        /// Creates product items from RFID tags which contain SGTIN-96 encoded product item data.
+        /// Method can:
+        /// 1 - create inventory-date-location and product items, insert them into database and return product items
+        /// 2 - create product items and return them, don't create inventory-date-location and don't insert anything into database
+        /// </summary>
+        /// <param name="dataMode"></param>
+        /// <param name="value"></param>
+        /// <param name="countProductItemsReceived"></param>
+        /// <param name="countProductItemsParseError"></param>
+        /// <param name="countProductItemsNotInDatabase"></param>
+        /// <param name="countProductItemsDuplicated"></param>
+        /// <param name="inventoryLocation"></param>
+        /// <param name="inventory"></param>
+        /// <param name="inventoryDateLocation"></param>
+        /// <param name="createdProductItems"></param>
+        /// <param name="errorItems"></param>
+        private void CreateInventoryDateLocation(EnumDataMode dataMode, RequestInventory value, out int countProductItemsReceived, ref int countProductItemsParseError, ref int countProductItemsNotInDatabase, ref int countProductItemsDuplicated, InventoryLocation inventoryLocation, Inventory inventory, ref InventoryDateLocation inventoryDateLocation, out Dictionary<string, ProductItem> createdProductItems, List<string> errorItems)
         {
             createdProductItems = new Dictionary<string, ProductItem>();
 
@@ -160,7 +221,7 @@ namespace ProductInventoryApi.Controllers
                         .ToList()
                         .ToDictionary(k => createCompanyProductIdentifier(k.CompanyPrefix, k.ItemReference), v => v.Product_Id);
 
-            if (operationType == EnumOperationType.Insert)
+            if (dataMode == EnumDataMode.InsertAndReturnData)
             {
                 // Insert new inventory-date-location and product items
                 inventoryDateLocation = new InventoryDateLocation()
@@ -172,16 +233,16 @@ namespace ProductInventoryApi.Controllers
                 context.InventoryDateLocations.Add(inventoryDateLocation);
             }
 
-            countProductItemsReceived = value.SgtinItems.Count();
-            foreach (var sgtinItem in value.SgtinItems)
+            countProductItemsReceived = value.HexRfidTags.Count();
+            foreach (var hexRfidTag in value.HexRfidTags)
             {
-                if (sgtinItem.TryParseSgtin96Item(out EnumHeader header, out EnumFilter filter, out EnumPartition partition, out long companyPrefix, out long itemReference, out long serialNumber, out string errorMessage))
+                if (hexRfidTag.TryParseSgtin96(out EnumHeader header, out EnumFilter filter, out EnumPartition partition, out long companyPrefix, out long itemReference, out long serialNumber, out string errorMessage))
                 {
                     // Check if company owns product
                     var companyPrefixItemReferenceIdentifier = createCompanyProductIdentifier(companyPrefix, itemReference);
                     if (companyProductIdentifiers.ContainsKey(companyPrefixItemReferenceIdentifier))
                     {
-                        // Check if product item is duplicated in this SGTIN-96 list
+                        // Check if product item represented by tag is duplicated in tag list
                         var identifier = createCompanyProductSerialIdentifier(companyPrefix, itemReference, serialNumber);
                         if (createdProductItems.ContainsKey(identifier) == false)
                         {
@@ -195,24 +256,24 @@ namespace ProductInventoryApi.Controllers
                             // Add product item to cache and database
                             createdProductItems.Add(identifier, productItem);
 
-                            if (operationType == EnumOperationType.Insert)
+                            if (dataMode == EnumDataMode.InsertAndReturnData)
                                 context.ProductItems.Add(productItem);   
                         }
                         else
                         {
-                            errorItems.Add(createErrorMessage(sgtinItem, $"duplicate item"));
+                            errorItems.Add(createErrorMessage(hexRfidTag, $"duplicate item"));
                             countProductItemsDuplicated++;
                         }
                     }
                     else
                     {
-                        errorItems.Add(createErrorMessage(sgtinItem, $"[company prefix]-[item reference] '{companyPrefixItemReferenceIdentifier}' not found in database"));
+                        errorItems.Add(createErrorMessage(hexRfidTag, $"[company prefix]-[item reference] '{companyPrefixItemReferenceIdentifier}' not found in database"));
                         countProductItemsNotInDatabase++;
                     }
                 }
                 else
                 {
-                    errorItems.Add(createErrorMessage(sgtinItem, errorMessage));
+                    errorItems.Add(createErrorMessage(hexRfidTag, errorMessage));
                     countProductItemsParseError++;
                 }
             }

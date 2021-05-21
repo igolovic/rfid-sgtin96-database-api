@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using ProductInventoryApi.Models.Attributes;
 
-namespace ProductInventoryApi.Models.PostedObjects
+namespace ProductInventoryApi.Models.RequestObjects
 {
-    public class PostedProduct
+    public class RequestProduct
     {
         [Required]
         public long CompanyPrefix { get; set; }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ProductInventoryApi.Sgtin
+﻿namespace ProductInventoryApi.Sgtin
 {
     public enum EnumFilter
     {

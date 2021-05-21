@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uBDAysDxr/tlWa/Y1xXrs3qNrs/IkLOAY9KIPqGORHT9hPgEvXXf9uzSpleGAXTk0n55FQ4aOvlV8f9EAHJTXg==",
+  "dgSpecHash": "AvIPOL7gRgA4BQ9MoW7KDSel8PDu0JeZWDvCtHjyWHmH2URpRSiY0QskIiWF+LeAoO/+gQIlRO3S7AqwULZ24Q==",
   "success": true,
-  "projectFilePath": "C:\\IG\\Src\\sen-imp-assign\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj",
+  "projectFilePath": "C:\\IG\\Src\\rfid-sgtin96-database-api\\ProductInventoryApi\\ProductInventoryApi\\ProductInventoryApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ig\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ig\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
