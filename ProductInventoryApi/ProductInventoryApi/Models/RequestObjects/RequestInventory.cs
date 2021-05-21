@@ -20,6 +20,7 @@ namespace ProductInventoryApi.Models.RequestObjects
         /// <summary>
         /// Hexadecimal RFID tags list. Tags should contain SGTIN-96 data which represents product items.
         /// </summary>
+        [Required]
         public List<string> HexRfidTags { get; set; }
     }
 }
