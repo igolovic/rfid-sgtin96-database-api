@@ -6,9 +6,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ProductInventoryApi.Models
 {
-    public partial class MyCompanyContext : DbContext
+    public partial class ProductInventoryApi_dbContext : DbContext
     {
-        public MyCompanyContext(DbContextOptions<MyCompanyContext> options)
+        public ProductInventoryApi_dbContext()
+        {
+        }
+
+        public ProductInventoryApi_dbContext(DbContextOptions<ProductInventoryApi_dbContext> options)
             : base(options)
         {
         }
@@ -51,7 +55,7 @@ namespace ProductInventoryApi.Models
             {
                 entity.ToTable("Inventory");
 
-                entity.HasIndex(e => e.InventoryId, "UQ__Inventor__F5FDE6B23654FF0C")
+                entity.HasIndex(e => e.InventoryId, "UQ__Inventor__F5FDE6B2A39D2A44")
                     .IsUnique();
 
                 entity.Property(e => e.InventoryId)

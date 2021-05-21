@@ -20,7 +20,7 @@ namespace ProductInventoryApi.Controllers
     [ApiController]
     public class InventoryController : ControllerBase
     {
-        private readonly MyCompanyContext context;
+        private readonly ProductInventoryApi_dbContext context;
         private readonly IStringLocalizer<Resource> localizer;
         private readonly ILoggerManager logger;
 
@@ -28,7 +28,7 @@ namespace ProductInventoryApi.Controllers
         private Func<long, long, long, string> createCompanyProductSerialIdentifier = (companyPrefix, itemReference, serialNumber) => $"{companyPrefix}-{itemReference}-{serialNumber}";
         private Func<string, string, string> createErrorMessage = (sgtin, message) => $"{sgtin} - {message}";
 
-        public InventoryController(IStringLocalizer<Resource> localizer, ILoggerManager logger, MyCompanyContext context)
+        public InventoryController(IStringLocalizer<Resource> localizer, ILoggerManager logger, ProductInventoryApi_dbContext context)
         {
             this.context = context;
             this.localizer = localizer;
@@ -121,15 +121,20 @@ namespace ProductInventoryApi.Controllers
                                              .SingleOrDefault();
 
                 EnumDataMode dataMode = inventoryDateLocation == null ? EnumDataMode.InsertAndReturnData : EnumDataMode.ReturnData;
+                EnumOperationType operationType;
 
                 Dictionary<string, ProductItem> createdProductItems = null;
                 List<string> errorItems = new List<string>(), updateInsertedItems = new List<string>(), updateDeletedItems = new List<string>();
                 if (dataMode == EnumDataMode.InsertAndReturnData)
+                {
                     // Insert new inventory-date-location record and product items into database
+                    operationType = EnumOperationType.InsertNewInventoryDateLocationWithProductItems;
                     CreateInventoryDateLocation(EnumDataMode.InsertAndReturnData, value, out countProductItemsReceived, ref countProductItemsParseError, ref countProductItemsNotInDatabase, ref countProductItemsDuplicated, inventoryLocation, inventory, ref inventoryDateLocation, out createdProductItems, errorItems);
+                }
                 else
                 {
                     // Inventory-date-location record already exists, only update product items (add/delete existing product items) related to inventory-date-location record
+                    operationType = EnumOperationType.InsertNewInventoryDateLocationWithProductItems;
                     CreateInventoryDateLocation(EnumDataMode.ReturnData, value, out countProductItemsReceived, ref countProductItemsParseError, ref countProductItemsNotInDatabase, ref countProductItemsDuplicated, inventoryLocation, inventory, ref inventoryDateLocation, out createdProductItems, errorItems);
 
                     var existingProductItems = (from idl in context.InventoryDateLocations
@@ -162,7 +167,7 @@ namespace ProductInventoryApi.Controllers
 
                 var resultData = new
                 {
-                    OperationType = Enum.GetName(dataMode),
+                    OperationType = Enum.GetName(operationType),
                     CountProductItemsReceived = countProductItemsReceived,
                     CountProductItemsParseError = countProductItemsParseError,
                     CountProductItemsNotInDatabase = countProductItemsNotInDatabase,

@@ -17,11 +17,11 @@ namespace ProductInventoryApi.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly MyCompanyContext context;
+        private readonly ProductInventoryApi_dbContext context;
         private readonly IStringLocalizer<Resource> localizer;
         private readonly ILoggerManager logger;
 
-        public ProductController(IStringLocalizer<Resource> localizer, ILoggerManager logger, MyCompanyContext context)
+        public ProductController(IStringLocalizer<Resource> localizer, ILoggerManager logger, ProductInventoryApi_dbContext context)
         {
             this.context = context;
             this.localizer = localizer;
