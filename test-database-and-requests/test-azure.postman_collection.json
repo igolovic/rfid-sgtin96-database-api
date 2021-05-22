@@ -1,0 +1,3205 @@
+{
+	"info": {
+		"_postman_id": "45d91c30-bf8c-4260-ab30-22c2b3511101",
+		"name": "rfid-sgtin16-database-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert all products",
+			"item": [
+				{
+					"name": "Insert product 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":3319361,\"companyName\":\"Sanford LLC\",\"itemReference\":407205,\"productName\":\"Beans - Kidney, Red Dry\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":6314853123,\"companyName\":\"Gleichner, Rodriguez and Wilkinson\",\"itemReference\":877,\"productName\":\"Scallops - In Shell\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":39266333,\"companyName\":\"Mertz, O'Conner and Heaney\",\"itemReference\":21526,\"productName\":\"Fruit Mix - Light\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":213645,\"companyName\":\"McGlynn Inc\",\"itemReference\":6152432,\"productName\":\"Pickles - Gherkins\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":178504,\"companyName\":\"Thompson LLC\",\"itemReference\":2577266,\"productName\":\"Straws - Cocktale\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 6",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":964495,\"companyName\":\"Halvorson and Sons\",\"itemReference\":3508204,\"productName\":\"Cotton Wet Mop 16 Oz\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 7",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":585675,\"companyName\":\"Torphy-Becker\",\"itemReference\":4259784,\"productName\":\"Wine - Merlot Vina Carmen\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 8",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":9488123,\"companyName\":\"Kunze, Wilkinson and Sawayn\",\"itemReference\":147805,\"productName\":\"Bread - Multigrain, Loaf\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 9",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":86906,\"companyName\":\"Blanda-Hagenes\",\"itemReference\":1437603,\"productName\":\"Pasta - Penne, Rigate, Dry\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 10",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":2973701,\"companyName\":\"Bednar-Mitchell\",\"itemReference\":682407,\"productName\":\"Bols Melon Liqueur\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 11",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":7942595,\"companyName\":\"Hilpert Group\",\"itemReference\":565126,\"productName\":\"Pate - Cognac\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 12",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":587451,\"companyName\":\"Lindgren, Witting and Wiegand\",\"itemReference\":1074506,\"productName\":\"Pork - Loin, Center Cut\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 13",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":40777411,\"companyName\":\"Larson, Reilly and Cruickshank\",\"itemReference\":36953,\"productName\":\"Tea - Green\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 14",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":227113,\"companyName\":\"Walsh-Schamberger\",\"itemReference\":5935575,\"productName\":\"Wine - Chateau Bonnet\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 15",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":3733204,\"companyName\":\"Orn-Langosh\",\"itemReference\":647520,\"productName\":\"Extract - Lemon\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 16",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":885734,\"companyName\":\"Deckow LLC\",\"itemReference\":8756756,\"productName\":\"Muffins - Assorted\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 17",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":2871566,\"companyName\":\"Lueilwitz, Schumm and Walsh\",\"itemReference\":145216,\"productName\":\"Beef - Bresaola\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 18",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":584202,\"companyName\":\"Bailey LLC\",\"itemReference\":2876851,\"productName\":\"Sugar - Brown, Individual\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 19",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":5032891234,\"companyName\":\"Sawayn-Gibson\",\"itemReference\":138,\"productName\":\"Pepper - Red Chili\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 20",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":1999335,\"companyName\":\"Gibson-Cormier\",\"itemReference\":642804,\"productName\":\"Compound - Raspberry\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 21",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":83250532,\"companyName\":\"Fisher Inc\",\"itemReference\":52838,\"productName\":\"Chicken - Whole\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 22",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":516232,\"companyName\":\"Leffler-Torphy\",\"itemReference\":7222702,\"productName\":\"Juice - Apple, 341 Ml\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 23",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":43907,\"companyName\":\"Nolan-Walter\",\"itemReference\":3406731,\"productName\":\"Beans - Kidney White\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 24",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":4584903,\"companyName\":\"Heller, Koepp and Powlowski\",\"itemReference\":679405,\"productName\":\"Beer - Camerons Cream Ale\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 25",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":983682,\"companyName\":\"Dickens and Sons\",\"itemReference\":4365465,\"productName\":\"Mousse - Mango\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 26",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":686748,\"companyName\":\"Steuber-Stracke\",\"itemReference\":9119606,\"productName\":\"Cheese - Grie Des Champ\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 27",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":678362,\"companyName\":\"Lynch, Yundt and Howe\",\"itemReference\":4156060,\"productName\":\"Plastic Arrow Stir Stick\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 28",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":591271,\"companyName\":\"Lakin, Prosacco and Terry\",\"itemReference\":5771945,\"productName\":\"Chicken Giblets\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 29",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":69124,\"companyName\":\"Mondelēz International\",\"itemReference\":1253252,\"productName\":\"Milka Oreo\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 30",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":107222,\"companyName\":\"Armstrong-Schinner\",\"itemReference\":797011,\"productName\":\"Honey - Comb\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 31",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":140037,\"companyName\":\"Torp-Reynolds\",\"itemReference\":9818542,\"productName\":\"Beef - Shank\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 32",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":750917,\"companyName\":\"Becker, Schaefer and Greenholt\",\"itemReference\":7528000,\"productName\":\"Walkers Special Old Whiskey\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 33",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":317580317580,\"companyName\":\"Medhurst-Romaguera\",\"itemReference\":7,\"productName\":\"Pork - Ground\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 34",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":390007,\"companyName\":\"Carter-Reynolds\",\"itemReference\":9160738,\"productName\":\"Cornflakes\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 35",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":528209,\"companyName\":\"Morissette LLC\",\"itemReference\":7791950,\"productName\":\"Shallots\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 36",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":2180435,\"companyName\":\"Gottlieb, Stroman and Grimes\",\"itemReference\":909583,\"productName\":\"Wine - Magnotta - Cab Franc\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 37",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":823332,\"companyName\":\"Durgan, Hahn and Runolfsdottir\",\"itemReference\":6492584,\"productName\":\"Carrots - Purple, Organic\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 38",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":511751,\"companyName\":\"Spencer, Block and Marks\",\"itemReference\":6644044,\"productName\":\"Jam - Blackberry, 20 Ml Jar\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 39",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":543540,\"companyName\":\"Kozey Group\",\"itemReference\":3141656,\"productName\":\"Wine - Clavet Saint Emilion\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 40",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":826025,\"companyName\":\"Little Group\",\"itemReference\":1130405,\"productName\":\"Salt - Sea\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 41",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":110720,\"companyName\":\"O'Hara LLC\",\"itemReference\":5041310,\"productName\":\"V8 Pet\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 42",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":33314622,\"companyName\":\"Weissnat and Sons\",\"itemReference\":53619,\"productName\":\"Mustard Prepared\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 43",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":764493764493,\"companyName\":\"Okuneva, Schneider and Collins\",\"itemReference\":4,\"productName\":\"Pumpkin\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 44",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":428651,\"companyName\":\"Cole LLC\",\"itemReference\":7619450,\"productName\":\"Creme De Cacao Mcguines\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 45",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":950316,\"companyName\":\"Keeling, Nikolaus and Larkin\",\"itemReference\":2380884,\"productName\":\"Berry Brulee\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 46",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":870953,\"companyName\":\"Dach-Herzog\",\"itemReference\":8728496,\"productName\":\"Lychee - Canned\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 47",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":8393604321,\"companyName\":\"Wolf Inc\",\"itemReference\":179,\"productName\":\"Veal - Eye Of Round\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 48",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":719065,\"companyName\":\"Legros-Cruickshank\",\"itemReference\":9765179,\"productName\":\"Salami - Genova\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 49",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":758601,\"companyName\":\"Schmeler-Lind\",\"itemReference\":2337085,\"productName\":\"Muffin Mix - Corn Harvest\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 50",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":368305,\"companyName\":\"Macejkovic-Murazik\",\"itemReference\":2620417,\"productName\":\"Chocolate Eclairs\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 51",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":791586,\"companyName\":\"Raynor LLC\",\"itemReference\":5775051,\"productName\":\"Gooseberry\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 52",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":28600054,\"companyName\":\"Mosciski, Maggio and DuBuque\",\"itemReference\":41912,\"productName\":\"Scallops - U - 10\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 53",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":608240,\"companyName\":\"Von, Gusikowski and Farrell\",\"itemReference\":2412148,\"productName\":\"Beef - Top Butt Aaa\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 54",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":60643,\"companyName\":\"Beer, Batz and Koch\",\"itemReference\":9948173,\"productName\":\"Chicken Breast Wing On\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 55",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":127083,\"companyName\":\"Watsica-Labadie\",\"itemReference\":5256251,\"productName\":\"Crush - Grape, 355 Ml\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 56",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":178540,\"companyName\":\"Tromp-Pacocha\",\"itemReference\":3505943,\"productName\":\"Cheese - Ricotta\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 57",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":51578,\"companyName\":\"Kuvalis, Doyle and Flatley\",\"itemReference\":9086830,\"productName\":\"Chicken - Leg / Back Attach\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 58",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":21276,\"companyName\":\"Feil Inc\",\"itemReference\":9837077,\"productName\":\"Coffee Cup 8oz 5338cd\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 59",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":745230,\"companyName\":\"Nitzsche-Gerlach\",\"itemReference\":6232899,\"productName\":\"Truffle - Whole Black Peeled\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 60",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":107956107956,\"companyName\":\"Rodriguez, Beier and Ratke\",\"itemReference\":2,\"productName\":\"Salmon - Atlantic, Fresh, Whole\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 61",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":7002011,\"companyName\":\"Orn, Ortiz and Keebler\",\"itemReference\":482701,\"productName\":\"Bread - Mini Hamburger Bun\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 62",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":4619611,\"companyName\":\"Rolfson, Collins and Runolfsson\",\"itemReference\":162323,\"productName\":\"Contreau\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 63",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":108653,\"companyName\":\"Rath, Ferry and Moen\",\"itemReference\":1180386,\"productName\":\"Wine - Spumante Bambino White\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 64",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":814875,\"companyName\":\"Cummerata-Schaden\",\"itemReference\":5090895,\"productName\":\"Pork - Tenderloin, Fresh\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 65",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":378922,\"companyName\":\"Rowe-Gibson\",\"itemReference\":8414833,\"productName\":\"Chutney Sauce - Mango\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 66",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":4499823,\"companyName\":\"Daugherty, Hettinger and Koelpin\",\"itemReference\":351572,\"productName\":\"Smoked Tongue\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 67",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":1210999912,\"companyName\":\"Heidenreich-Kessler\",\"itemReference\":123,\"productName\":\"Ecolab - Hobart Washarm End Cap\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 68",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":900706,\"companyName\":\"Weimann-Casper\",\"itemReference\":8213657,\"productName\":\"Sea Bass - Whole\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 69",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":7408273,\"companyName\":\"Stark-McCullough\",\"itemReference\":664337,\"productName\":\"Turkey - Whole, Fresh\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 70",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":828415,\"companyName\":\"Weber-Reichel\",\"itemReference\":5417914,\"productName\":\"Flower - Leather Leaf Fern\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 71",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":451802,\"companyName\":\"Koelpin, Kozey and Grimes\",\"itemReference\":2638491,\"productName\":\"Fond - Neutral\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 72",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":169691,\"companyName\":\"Smitham Group\",\"itemReference\":87387,\"productName\":\"Almonds Ground Blanched\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 73",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":563974,\"companyName\":\"Gusikowski-Leuschke\",\"itemReference\":4156235,\"productName\":\"Cranberries - Dry\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 74",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":77605,\"companyName\":\"Shanahan, Bernier and Funk\",\"itemReference\":5749311,\"productName\":\"Trout - Smoked\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 75",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":349605,\"companyName\":\"Harvey-Weber\",\"itemReference\":4548221,\"productName\":\"Wine - Zonnebloem Pinotage\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 76",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":342472,\"companyName\":\"Macejkovic, Towne and Spencer\",\"itemReference\":6004566,\"productName\":\"Tamarind Paste\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 77",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":770270770270,\"companyName\":\"Halvorson, Schinner and Smitham\",\"itemReference\":9,\"productName\":\"Pepper Squash\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 78",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":327884,\"companyName\":\"Welch and Sons\",\"itemReference\":7703818,\"productName\":\"Crab - Blue, Frozen\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 79",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":812302,\"companyName\":\"Spinka, Hauck and Bogan\",\"itemReference\":5276620,\"productName\":\"Juice Peach Nectar\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 80",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":905710,\"companyName\":\"Jakubowski-Veum\",\"itemReference\":9832832,\"productName\":\"Plate - Foam, Bread And Butter\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 81",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":997970,\"companyName\":\"Stark-Ward\",\"itemReference\":9212388,\"productName\":\"Pasta - Ravioli\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 82",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":917969,\"companyName\":\"Aufderhar Group\",\"itemReference\":3602750,\"productName\":\"Cheese - Ricotta\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 83",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":96652,\"companyName\":\"Wisoky-Roob\",\"itemReference\":6172545,\"productName\":\"Pork - Kidney\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 84",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":51151534,\"companyName\":\"Schmidt-Quigley\",\"itemReference\":78331,\"productName\":\"Apple - Delicious, Red\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 85",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":5023208822,\"companyName\":\"Smitham, Swaniawski and Upton\",\"itemReference\":521,\"productName\":\"Hagen Daza - Dk Choocolate\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 86",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":446617,\"companyName\":\"Koelpin Inc\",\"itemReference\":9353565,\"productName\":\"Wine - Sauvignon Blanc Oyster\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 87",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":13332,\"companyName\":\"Little, King and Zboncak\",\"itemReference\":4770766,\"productName\":\"Wine - Red Oakridge Merlot\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 88",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":600851600851,\"companyName\":\"O'Conner-Turner\",\"itemReference\":2,\"productName\":\"Wild Boar - Tenderloin\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 89",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":196645,\"companyName\":\"Lynch-Fay\",\"itemReference\":1236529,\"productName\":\"Broccoli - Fresh\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 90",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":4984121,\"companyName\":\"O'Reilly Inc\",\"itemReference\":901844,\"productName\":\"Pork - Back, Long Cut, Boneless\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 91",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":676413,\"companyName\":\"Hayes-Schumm\",\"itemReference\":8849362,\"productName\":\"Triple Sec - Mcguinness\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 92",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":485771,\"companyName\":\"Morar-Schulist\",\"itemReference\":5339535,\"productName\":\"Lamb - Whole Head Off,nz\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 93",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":793681,\"companyName\":\"Carroll-Hammes\",\"itemReference\":9774282,\"productName\":\"Jicama\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 94",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":3209622,\"companyName\":\"Windler-Stark\",\"itemReference\":461277,\"productName\":\"Longos - Greek Salad\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 95",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":823413,\"companyName\":\"Johnson-Donnelly\",\"itemReference\":4397760,\"productName\":\"Grouper - Fresh\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 96",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":623828,\"companyName\":\"Wolf and Sons\",\"itemReference\":4865650,\"productName\":\"Food Colouring - Orange\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 97",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":655062,\"companyName\":\"Zboncak Inc\",\"itemReference\":1232213,\"productName\":\"Vermouth - White, Cinzano\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 98",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":472731472731,\"companyName\":\"Dicki Group\",\"itemReference\":2,\"productName\":\"Soup - Knorr, Chicken Noodle\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 99",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":443750,\"companyName\":\"Cole, Kemmer and Turner\",\"itemReference\":5573641,\"productName\":\"Spring Roll Veg Mini\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product 100",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":2777462999,\"companyName\":\"Gottlieb-Denesik\",\"itemReference\":401,\"productName\":\"Bread - Hamburger Buns\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Insert inventory and tags",
+			"item": [
+				{
+					"name": "post-1000-rfid-tags",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json;charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"inventoryId\":\"11jv1jv21hjg21\",\"inventoryLocation\":\"Varaždin\",\"inventoryDate\":\"2021-05-19\",\"hexRfidTags\":[\r\n\"303435CAC83DCF00000022AD\",\r\n\"307ABE3665404EC00F863485\",\r\n\"309B1BC6D36B93C032AAD59A\",\r\n\"30727B26B233998003303C79\",\r\n\"305B747BA582600033AF5994\",\r\n\"30D4068B5B0A54C00D853004\",\r\n\"3075E4C70E27E180119FA3FC\",\r\n\"3082C7FD845E3500343CAD1C\",\r\n\"3078325EA2A9DB8003A7CACC\",\r\n\"30DAE4D248EA4F4039309983\",\r\n\"309BA00B0915150001BCA55E\",\r\n\"3019B9368A10A6C022E76FF5\",\r\n\"3089F8221B8D6B800E501E97\",\r\n\"3078DDCA56A475C036F6E733\",\r\n\"3098325EA2A9DB8026AC1D82\",\r\n\"305A9EA722C9DD800BDAC6BF\",\r\n\"30D6431BEC905740056E9860\",\r\n\"30DA51FC09339D001FAA9F1D\",\r\n\"30D80D051232F380245DAAD9\",\r\n\"309AE4D248EA4F40106260E5\",\r\n\"305517D71E977B4003AD5F39\",\r\n\"303940331D6342800BB3EC5D\",\r\n\"30DA3DAEC41952800CBB7A68\",\r\n\"30D8AE5209D4DC8006A03830\",\r\n\"30D0FE2B9F345CC01EB76179\",\r\n\"309A6135128F9C802BCE78B5\",\r\n\"303A96768FDAA7000649307D\",\r\n\"301B747BA58260000C24F0B7\",\r\n\"30D485154F7843C033E35193\",\r\n\"30D888C165746B8000C8D904\",\r\n\"3038438104C7E1000E272B95\",\r\n\"30D87C1AD40D0EC0022E33CF\",\r\n\"309A948F61C1F4800BE382AC\",\r\n\"30187C1AD40D0EC017090EB3\",\r\n\"30022F962F574C803500BA9A\",\r\n\"309A9EA722C9DD8013E86B12\",\r\n\"301A4169D604AA401C75B06F\",\r\n\"30292BFBD36222802B17D250\",\r\n\"30A8AE5209D4DC80179E09DE\",\r\n\"3059B42663AE574020548A10\",\r\n\"3019B1599543024035F94926\",\r\n\"30B4068B5B0A54C0069E56AC\",\r\n\"309A3BF2D03FF2001D758EAE\",\r\n\"30DBADE3CD61FB000F616E33\",\r\n\"30782AE0CCFEE2C00557CC22\",\r\n\"307512A5BD5755000595A921\",\r\n\"309B05089607B2C039B51FDD\",\r\n\"30797CDDE2F208800EA34768\",\r\n\"30387C1AD40D0EC018338C07\",\r\n\"30D9720AA0199C40362F5670\",\r\n\"3039B9368A10A6C01CB0AB2C\",\r\n\"3059B9368A10A6C034E2B96A\",\r\n\"30BA4169D604AA400EC3281A\",\r\n\"307B19439420F3003289EA56\",\r\n\"30492B681576824012ED0698\",\r\n\"30D0FE2B9F345CC0267ED683\",\r\n\"303888C165746B800BBE7212\",\r\n\"301B6F989F55264033DA97A7\",\r\n\"3030DA337B28EE000502168C\",\r\n\"3058325EA2A9DB8018F7663C\",\r\n\"3078C00944B78C4036707022\",\r\n\"305A3BF2D03FF200025B9102\",\r\n\"307B747BA582600039894968\",\r\n\"30DA51FC09339D0026E21ECA\",\r\n\"3000648ABDEAD08020A205A3\",\r\n\"307AD7C397C6D0C01F6FBF1C\",\r\n\"3038438104C7E100051CCB67\",\r\n\"30BA6135128F9C8024B5F288\",\r\n\"30D1371B61A416402C947CDB\",\r\n\"305B28FFD4AAEE8010D86434\",\r\n\"3070FE2B9F345CC038E1C249\",\r\n\"3010FE2B9F345CC007281DF3\",\r\n\"30D47A079E73BD003370B3A9\",\r\n\"30B9F8221B8D6B802718CE5F\",\r\n\"30547A079E73BD0036DFCF0B\",\r\n\"301AE4D248EA4F4003B1FEDB\",\r\n\"3021B843F74D6C8034048C6C\",\r\n\"3079DA62D45E63C007D1449C\",\r\n\"30DADD515CB790000BF60002\",\r\n\"3038438104C7E10027829E75\",\r\n\"30C127C50C4E31C018B59D57\",\r\n\"3035C42A4688C44005830BC2\",\r\n\"3061B843F74D6C800935F5B1\",\r\n\"307940331D6342802EC6E12C\",\r\n\"30185E63178BE0401BC547FC\",\r\n\"20B8D0A357783C0010954240\",\r\n\"309B747BA58260001A9A8415\",\r\n\"303B240918C46A000CB9BACD\",\r\n\"30DA948F61C1F48037B8D3CF\",\r\n\"30BA7FB584B355400176C344\",\r\n\"30822F962F574C8035C0C75B\",\r\n\"3079556951599F4018649993\",\r\n\"30DADD515CB790000B84C0EA\",\r\n\"3054B580169A69C0203BB2F9\",\r\n\"303A12CD0BFC060021E5D535\",\r\n\"30347A079E73BD000D9E6224\",\r\n\"301B0714654932801CECA74D\",\r\n\"303B6F989F552640104C493A\",\r\n\"30D512A5BD57550030992740\",\r\n\"30B8325EA2A9DB801673BCFE\",\r\n\"3054CA99058DA94013E76F62\",\r\n\"307B80744DBE4F8001F8D4AE\",\r\n\"30D8AE5B0D5FC5C01CC221BE\",\r\n\"303B80744DBE4F80055BF740\",\r\n\"30C2CD5EDCD17A401BB193EF\",\r\n\"3018AE5209D4DC8039B18A7C\",\r\n\"30822F962F574C8038EE2F05\",\r\n\"309A12CD0BFC060032695142\",\r\n\"3038325EA2A9DB801A711B96\",\r\n\"309B60F9A167850019EA8A4E\",\r\n\"30D82AE0CCFEE2C0273E218D\",\r\n\"30D9DA62D45E63C00F5C65B8\",\r\n\"30BB28FFD4AAEE800C4E0264\",\r\n\"3018100944B78C4010B33802\",\r\n\"305888C165746B8014135F1A\",\r\n\"3002CD5EDCD17A401842FB84\",\r\n\"30DB241D50C6B0000644C193\",\r\n\"3014C3E659C2774005256976\",\r\n\"301A26C18FDAD2C024F920E7\",\r\n\"30BA26C18FDAD2C028DF9BE1\",\r\n\"30318641574C7EC02B1E71DD\",\r\n\"307967AC49FF00401A8F7AAE\",\r\n\"3098325EA2A9DB8030E0B8F7\",\r\n\"3002C7FD845E350007C19774\",\r\n\"3038438104C7E100053CD7DA\",\r\n\"3019B42663AE574024424701\",\r\n\"304978650303DB402AD3660C\",\r\n\"30DB60F9A167850021211D95\",\r\n\"3038438104C7E1000812A9C9\",\r\n\"30394E7216E7D580035D323A\",\r\n\"302978650303DB40276C6F6C\",\r\n\"3078438104C7E10013457327\",\r\n\"3079F8221B8D6B80159EE1FC\",\r\n\"301B747BA582600025F65A0F\",\r\n\"3018AE5B0D5FC5C01261816B\",\r\n\"3038438104C7E1000FDAB5A6\",\r\n\"30492B68157682402CACFB2D\",\r\n\"30D519F56C9E84C033C88C79\",\r\n\"307517D71E977B401B8559DF\",\r\n\"3055E4C70E27E1802C830E49\",\r\n\"3038438104C7E100318215E0\",\r\n\"3055AB5E6DD76340123FF3A0\",\r\n\"30B6431BEC90574014FDFA68\",\r\n\"30B27B26B23399803921D789\",\r\n\"30583B38E5F303401956076D\",\r\n\"301A03D45DB9538023B20CFB\",\r\n\"30B8438104C7E1001F99A55C\",\r\n\"3059B15995430240023A3809\",\r\n\"3018438104C7E1000EC51DAA\",\r\n\"30292BFBD3622280248F97EF\",\r\n\"30597CDDE2F208802E3ACC39\",\r\n\"30B5AB5E6DD763402F578FC2\",\r\n\"3061B843F74D6C800441E375\",\r\n\"3038438104C7E10027245E55\",\r\n\"30184BC955EE8FC025A74861\",\r\n\"3040648ABDEAD0800E33AD27\",\r\n\"30D811C7258685400B05A27D\",\r\n\"301B6F989F552640350CF67F\",\r\n\"305814C72586854031734C64\",\r\n\"305854DE857BE8C0187DBA61\",\r\n\"30D517D71E977B400E6313B4\",\r\n\"303A3DAEC4195280172B785A\",\r\n\"30112B940E950580324C1625\",\r\n\"30BB747BA5826000292CA7D2\",\r\n\"3098325EA2A9DB80328673B7\",\r\n\"307AD7C397C6D0C0260F98F5\",\r\n\"3054E3DB5278580031A11E0E\",\r\n\"309485154F7843C005C424C5\",\r\n\"3001B843F74D6C8006827D7E\",\r\n\"30D517D71E977B4030F779C0\",\r\n\"307519F56C9E84C02B48FAAB\",\r\n\"30DA3DAEC419528016F3240E\",\r\n\"30D84BC955EE8FC0078F69AD\",\r\n\"3074B580169A69C0094631C6\",\r\n\"30D86A1B4480B88010302748\",\r\n\"3018438104C7E1002AB73FB7\",\r\n\"30DB747BA58260000E1721F9\",\r\n\"30D5C42A4688C44021E27C80\",\r\n\"307A9EA722C9DD80308EA203\",\r\n\"307A3DAEC41952803769BC93\",\r\n\"3062C7FD845E35002A12FCEF\",\r\n\"30C8A58CB8D764402811AE4C\",\r\n\"30BB747BA58260000515680A\",\r\n\"30A9F44C3CE12CC01E476C17\",\r\n\"301B19439420F30022741846\",\r\n\"301A96768FDAA70026AF1AAC\",\r\n\"307A12CD0BFC0600263BA300\",\r\n\"30D27B26B233998008A4C498\",\r\n\"30327B26B23399800FCFE197\",\r\n\"307967AC49FF004015822A15\",\r\n\"309A7FB584B3554027D42CBB\",\r\n\"30DB528A614BEC00368E1FCA\",\r\n\"3089F44C3CE12CC02B4F39BB\",\r\n\"30BB05089607B2C020BB5441\",\r\n\"30B8AE5209D4DC8024A6E0A2\",\r\n\"3030FE2B9F345CC000573AA4\",\r\n\"305859DE857BE8C02F4927E3\",\r\n\"30D9A29ADD10DE801EA394DC\",\r\n\"30A92BFBD3622280329EE095\",\r\n\"3038438104C7E10012B7AC52\",\r\n\"3034E3DB52785800358824EE\",\r\n\"30118641574C7EC0061AF42E\",\r\n\"30A2CD5EDCD17A400C1C41DC\",\r\n\"30D80D051232F3802E6F055C\",\r\n\"307519F56C9E84C02B9AFCEF\",\r\n\"30A92BFBD362228014E69704\",\r\n\"3060648ABDEAD0801A0ACE07\",\r\n\"3049F44C3CE12CC02D612F49\",\r\n\"30787C1AD40D0EC0275E2032\",\r\n\"303A7FB584B355402FCC83BD\",\r\n\"302978650303DB40279DDD77\",\r\n\"30712B940E95058021F00F0A\",\r\n\"30D485154F7843C022E701C7\",\r\n\"30BADD515CB790002558F06E\",\r\n\"30222F962F574C80187DB1AC\",\r\n\"303940331D63428035411490\",\r\n\"309BADE3CD61FB0020D48788\",\r\n\"307BCE94A324790036311A3E\",\r\n\"30B9F8221B8D6B802A721EB6\",\r\n\"305A26C18FDAD2C0249D5F59\",\r\n\"301A12CD0BFC0600284352CE\",\r\n\"30753034E770B50025CCBC10\",\r\n\"3055E4C70E27E1800BA286A3\",\r\n\"319B60F9A16785001A108C20\",\r\n\"3042C7FD845E3500010CDEEB\",\r\n\"30DA3A828AF96CC032D7F29B\",\r\n\"303A3DAEC419528039A18DFB\",\r\n\"30B9B42663AE57402FBF7BA5\",\r\n\"309B80744DBE4F801DD3F238\",\r\n\"30BB80744DBE4F802318DFF9\",\r\n\"30D86C20133B2780063D10FD\",\r\n\"30B8AE5209D4DC802C7FDDD9\",\r\n\"305512A5BD5755002A022984\",\r\n\"3058C00944B78C403988436A\",\r\n\"30B512A5BD575500391523B0\",\r\n\"30B9B1599543024018F03AB5\",\r\n\"30C8482E64681EC0363F734E\",\r\n\"30553034E770B500062BA3D1\",\r\n\"3038438104C7E1000C08B11C\",\r\n\"30DA7FB584B355400B8466DA\",\r\n\"30A2CD5EDCD17A400FFAB956\",\r\n\"301A7FB584B355402C00B13C\",\r\n\"307B6F989F552640167EF16F\",\r\n\"30B8438104C7E1002883E6ED\",\r\n\"3081B843F74D6C80107CBF2E\",\r\n\"30383B38E5F3034009507E89\",\r\n\"3098438104C7E1002580FD4A\",\r\n\"3081B843F74D6C8028285400\",\r\n\"301B80744DBE4F8025CEC1A1\",\r\n\"3035E4C70E27E180212E101B\",\r\n\"30B9DA62D45E63C021A00FBB\",\r\n\"30D967AC49FF00402E8EA03F\",\r\n\"30A2C7FD845E35002A1EE1CD\",\r\n\"303A51FC09339D0003F0B005\",\r\n\"307B19439420F3000D610A9B\",\r\n\"30C9F44C3CE12CC02B1FD459\",\r\n\"3038438104C7E1002E5934BB\",\r\n\"309B528A614BEC00297B84AD\",\r\n\"309BADE3CD61FB000F997570\",\r\n\"305A12CD0BFC0600239ACB8A\",\r\n\"3051371B61A41640378021FA\",\r\n\"3058D0A357783C000F190FE5\",\r\n\"301B60F9A16785002921FF6D\",\r\n\"309ABE3665404EC00F269F73\",\r\n\"30DB241D50C6B0002372E560\",\r\n\"301519F56C9E84C0131A9966\",\r\n\"3039A29ADD10DE802C07D631\",\r\n\"301A3BF2D03FF2000C1788D9\",\r\n\"3090DA337B28EE002D55F457\",\r\n\"305B071465493280291A8A88\",\r\n\"30C2CD5EDCD17A402F9CFD31\",\r\n\"305B19439420F30037F2D018\",\r\n\"301B0714654932802611CD17\",\r\n\"301B60F9A167850022C872D4\",\r\n\"30DADD515CB790001ACB1AC5\",\r\n\"3028482E64681EC032C90256\",\r\n\"30B967AC49FF004002A700E7\",\r\n\"30BB747BA582600003968D45\",\r\n\"303B747BA582600037228C69\",\r\n\"307A51FC09339D00190B565E\",\r\n\"307517D71E977B400409C96F\",\r\n\"30A127C50C4E31C02ABE5DAC\",\r\n\"307A26C18FDAD2C01398B614\",\r\n\"30347A079E73BD000A3831CA\",\r\n\"30D9720AA0199C400DE7A657\",\r\n\"3070DA337B28EE001C9767AA\",\r\n\"307854DE857BE8C0102A1185\",\r\n\"30D87C1AD40D0EC00506F17B\",\r\n\"3019B15995430240096BAAC8\",\r\n\"30594E7216E7D5801D1E2AFA\",\r\n\"3030014B6DD556C01734933B\",\r\n\"30D85E63178BE0402FCD8412\",\r\n\"30D8D0A357783C00102D91E2\",\r\n\"3056431BEC9057400D0F1E6D\",\r\n\"301940331D6342801CE7A96A\",\r\n\"3039B159954302400EC1F585\",\r\n\"30D854DE857BE8C012126680\",\r\n\"3035C42A4688C4400DD7802D\",\r\n\"3069F44C3CE12CC01102456B\",\r\n\"30692B68157682400B38DFA8\",\r\n\"3039720AA0199C4022AB3D33\",\r\n\"305ADD515CB7900018BF40AD\",\r\n\"3096431BEC9057402E84E311\",\r\n\"30B9F3C1D95853003330A57F\",\r\n\"30BB528A614BEC000D175385\",\r\n\"30DAE4D248EA4F400C57A031\",\r\n\"305485154F7843C0002D737C\",\r\n\"307A6135128F9C80131404AC\",\r\n\"303BCE94A324790007502DEF\",\r\n\"301B747BA5826000109652F0\",\r\n\"30D97CDDE2F2088024CF3C1B\",\r\n\"30B1371B61A416401E9AC084\",\r\n\"307B1BC6D36B93C0339D5F59\",\r\n\"3094C3E659C27740397D504F\",\r\n\"30A1B843F74D6C800C89D829\",\r\n\"307BADE3CD61FB001B8D821A\",\r\n\"3088A58CB8D764400EA05274\",\r\n\"30BABE3665404EC019C19DD4\",\r\n\"30B4068B5B0A54C03ABD3B7F\",\r\n\"30782AE0CCFEE2C02E68FFBA\",\r\n\"30780D051232F38036ADC5FD\",\r\n\"30B94E7216E7D580147B4529\",\r\n\"3038DDCA56A475C01910BEE2\",\r\n\"3059F8221B8D6B8009F6FA6F\",\r\n\"3019720AA0199C4026014F5B\",\r\n\"307A3DAEC4195280229858B9\",\r\n\"3074B580169A69C01313F12F\",\r\n\"30783B38E5F303401802284B\",\r\n\"305BC0A090A726403055E395\",\r\n\"309B19439420F3001AAE33AE\",\r\n\"3078DDCA56A475C011011A5D\",\r\n\"30D0DA337B28EE000B6C1CDA\",\r\n\"309854DE857BE8C00BD2007F\",\r\n\"305888C165746B8028E965D7\",\r\n\"301BC0A090A7264033694C7E\",\r\n\"30D8325EA2A9DB80349E1FFA\",\r\n\"307B747BA582600011A2A18E\",\r\n\"301ABE3665404EC02144B192\",\r\n\"309A4169D604AA4033C11F3F\",\r\n\"305967AC49FF00402C9B6F3C\",\r\n\"30927B26B233998037B18598\",\r\n\"3038438104C7E10036E396E6\",\r\n\"309814C72586854008080470\",\r\n\"30B0DA337B28EE0030ABA0D8\",\r\n\"307A3DAEC41952800CF24367\",\r\n\"30D854DE857BE8C01161CAA5\",\r\n\"3019B1599543024024A0D30F\",\r\n\"309814C725868540305FD304\",\r\n\"30DA7FB584B35540043CB546\",\r\n\"305485154F7843C02FD9AD49\",\r\n\"30BB0714654932801CCF8B6B\",\r\n\"301B19439420F3002F10B40C\",\r\n\"30718641574C7EC00AE3EDA2\",\r\n\"305814C7258685400DFE0BE3\",\r\n\"30B0FE2B9F345CC01CD4DF84\",\r\n\"307A96768FDAA7002DACDBD8\",\r\n\"30B888C165746B800DCB2F48\",\r\n\"303B26AA444FE940128B3B97\",\r\n\"30DB05089607B2C0193FA363\",\r\n\"3038438104C7E1001E884682\",\r\n\"301ABE3665404EC01FB2FCD7\",\r\n\"30D967AC49FF00402D2C1BB6\",\r\n\"30BBA00B091515000630B4F2\",\r\n\"30D8AE5209D4DC8014C45F7F\",\r\n\"30BA3A828AF96CC0156B76F3\",\r\n\"3028482E64681EC02470DC3A\",\r\n\"303A3BF2D03FF2003A119BBF\",\r\n\"303B528A614BEC0012D4C7A0\",\r\n\"307B528A614BEC001D1998D7\",\r\n\"3050FE2B9F345CC02DAC19D5\",\r\n\"303BC0A090A72640281FF9F2\",\r\n\"301512A5BD57550027E12893\",\r\n\"307B26AA444FE94003DC8CEC\",\r\n\"301B60F9A16785000599A66F\",\r\n\"30118641574C7EC00CA5C3B3\",\r\n\"3099A29ADD10DE801B30E95B\",\r\n\"30DABE3665404EC02A871F79\",\r\n\"30982AE0CCFEE2C00155F0F0\",\r\n\"301005089607B2C0346820BE\",\r\n\"3099B42663AE57400CE3503E\",\r\n\"307485154F7843C036C1D3E2\",\r\n\"30DBA00B0915150032299E64\",\r\n\"30C8482E64681EC0330AD77D\",\r\n\"30C92B681576824036CE7846\",\r\n\"307A4169D604AA4008ACC78C\",\r\n\"305A6135128F9C803111EDC5\",\r\n\"309B60F9A16785000A571A5A\",\r\n\"30A2C7FD845E350028CD2475\",\r\n\"30584BC955EE8FC023F14929\",\r\n\"3038438104C7E10011AAC945\",\r\n\"30B47A079E73BD003925C439\",\r\n\"307AE4D248EA4F40093A86BF\",\r\n\"30DABE3665404EC01ADFF223\",\r\n\"30587C1AD40D0EC03483C5ED\",\r\n\"30B9B1599543024019878EBD\",\r\n\"308127C50C4E31C03B76F4D2\",\r\n\"3018D0A357783C00037856B9\",\r\n\"30BA9EA722C9DD803B069445\",\r\n\"301A948F61C1F4801F0489BC\",\r\n\"3079B9368A10A6C00B7616AF\",\r\n\"301BADE3CD61FB0006D6BD18\",\r\n\"3038438104C7E1000404A1F5\",\r\n\"30DB05089607B2C00B01D82B\",\r\n\"30386A1B4480B880235B9C23\",\r\n\"3071371B61A41640333A254A\",\r\n\"30B53034E770B50021B5B12D\",\r\n\"305B240918C46A0039DC357A\",\r\n\"30B87C1AD40D0EC02A0B1C53\",\r\n\"30D6431BEC90574010A5842C\",\r\n\"309A3BF2D03FF2002E773DA6\",\r\n\"3036431BEC905740256AE568\",\r\n\"30380D051232F380217D8EC0\",\r\n\"30D4C3E659C2774015D810F0\",\r\n\"305814C7258685401F680088\",\r\n\"3030014B6DD556C0234A2565\",\r\n\"309BC0A090A726400A0BEE84\",\r\n\"3018325EA2A9DB801D2BE3BA\",\r\n\"301B1BC6D36B93C000214EC0\",\r\n\"306978650303DB40265652A9\",\r\n\"30112B940E9505801FF618B4\",\r\n\"3075E4C70E27E18015845946\",\r\n\"301B0714654932802B49D0B0\",\r\n\"3055E4C70E27E1800195911B\",\r\n\"30780D051232F380346567B8\",\r\n\"30D80D051232F38021ED8576\",\r\n\"303B80744DBE4F8017577B3F\",\r\n\"30DA26C18FDAD2C01E09FBE4\",\r\n\"3038DDCA56A475C0280BF2DB\",\r\n\"309B747BA582600002F101FC\",\r\n\"307854DE857BE8C005F89270\",\r\n\"303A948F61C1F480207AB8C4\",\r\n\"307B240918C46A000235DE8D\",\r\n\"3018DDCA56A475C00B70A256\",\r\n\"305A948F61C1F480155393E7\",\r\n\"30D6431BEC905740177B73E5\",\r\n\"306127C50C4E31C011D5DAF2\",\r\n\"307A96768FDAA7001F5C0B40\",\r\n\"307A3A828AF96CC025CC0397\",\r\n\"30312B940E9505803785AA69\",\r\n\"3050FE2B9F345CC031E70A19\",\r\n\"3018DDCA56A475C029095329\",\r\n\"3068A58CB8D76440038ED755\",\r\n\"3038438104C7E10004FCFC97\",\r\n\"3038438104C7E1002DF5FF2B\",\r\n\"309B1BC6D36B93C02F6364AB\",\r\n\"3059720AA0199C402BA7DFA0\",\r\n\"30794E7216E7D58032A2BBAE\",\r\n\"3019F3C1D958530025900225\",\r\n\"303A3DAEC41952800111CD57\",\r\n\"30B888C165746B8011CC7434\",\r\n\"3079720AA0199C403A5AB8F6\",\r\n\"3099B159954302403AA4FFD2\",\r\n\"309A7FB584B355403229D487\",\r\n\"3079DA62D45E63C01C469A5E\",\r\n\"305B241D50C6B000111DA91F\",\r\n\"305B60F9A167850029951C34\",\r\n\"30DB240918C46A001084E504\",\r\n\"307A3DAEC419528029C24AB5\",\r\n\"3059B15995430240076C2E9C\",\r\n\"307B747BA58260001F164A52\",\r\n\"30B0DA337B28EE002CA4F2CC\",\r\n\"30D9DA62D45E63C011F4008E\",\r\n\"30353034E770B50024D3E6D1\",\r\n\"30918641574C7EC030980706\",\r\n\"30D9B42663AE574004FBE1ED\",\r\n\"3038AE5B0D5FC5C01917A82C\",\r\n\"3094068B5B0A54C004533C9B\",\r\n\"30BB19439420F300054F362D\",\r\n\"30C92BFBD36222800BF8C9D5\",\r\n\"3018AE5209D4DC8001285052\",\r\n\"3039F8221B8D6B8026775A5F\",\r\n\"307519F56C9E84C03813232F\",\r\n\"307B528A614BEC000072E9C4\",\r\n\"3070DA337B28EE001259172A\",\r\n\"30D9DA62D45E63C036DBAF25\",\r\n\"303940331D634280041A17A7\",\r\n\"303814C7258685400158D768\",\r\n\"3099B42663AE57400247CF50\",\r\n\"3078D0A357783C0006517EA1\",\r\n\"3014B580169A69C02E70BF44\",\r\n\"30C1B843F74D6C801271C9F1\",\r\n\"3001B843F74D6C8013661DA1\",\r\n\"30B85E63178BE04014AED476\",\r\n\"3034AF44388DD000156E1AE2\",\r\n\"3099B159954302403A137EF0\",\r\n\"3094E3DB5278580019C87F69\",\r\n\"30C9F44C3CE12CC001C9F7B9\",\r\n\"303B28FFD4AAEE8000184C02\",\r\n\"3091371B61A4164025BF0F4A\",\r\n\"305BADE3CD61FB0027AF240C\",\r\n\"30B517D71E977B4000DADEF5\",\r\n\"307A26C18FDAD2C02FCAFFF8\",\r\n\"3034C3E659C2774039B474E0\",\r\n\"30953034E770B5001A6D733F\",\r\n\"3018AE5209D4DC803711FB5C\",\r\n\"3079556951599F4035C2C1EE\",\r\n\"307517D71E977B4032B84BA2\",\r\n\"30B9B15995430240084D341D\",\r\n\"301A6135128F9C8037F7627B\",\r\n\"3001B843F74D6C80075655F5\",\r\n\"3030014B6DD556C00765E2FE\",\r\n\"301A96768FDAA70025FAAB27\",\r\n\"301ADD515CB79000224E9DD1\",\r\n\"305B6F989F5526403A4E242A\",\r\n\"30587C1AD40D0EC028911E41\",\r\n\"3059556951599F4021E7F4B9\",\r\n\"3079A29ADD10DE8017CC26FB\",\r\n\"305B26AA444FE9401FF3BB13\",\r\n\"30787C1AD40D0EC003936100\",\r\n\"305B240918C46A00196453EB\",\r\n\"30092B68157682400542177A\",\r\n\"3090DA337B28EE000AD91AA9\",\r\n\"30B8325EA2A9DB800BE0F76E\",\r\n\"309967AC49FF00401CE7499C\",\r\n\"305AD7C397C6D0C03748633E\",\r\n\"303485154F7843C01AB2F603\",\r\n\"307B07146549328013EF4CA9\",\r\n\"30A978650303DB40212C1708\",\r\n\"3079F3C1D95853001C8CCAEB\",\r\n\"30D86C20133B27801FB53B68\",\r\n\"3058325EA2A9DB802F122920\",\r\n\"309AE4D248EA4F40102EEE90\",\r\n\"301512A5BD5755000D580C1B\",\r\n\"30BA7FB584B355403488A6DB\",\r\n\"304978650303DB400EC7A98D\",\r\n\"305A3A828AF96CC02B286024\",\r\n\"3079F3C1D958530017669CC9\",\r\n\"30DAD7C397C6D0C013DE33C6\",\r\n\"301854DE857BE8C006853FF1\",\r\n\"301B528A614BEC00341C1307\",\r\n\"30587C1AD40D0EC02B9220C0\",\r\n\"305B05089607B2C01AFAA1F7\",\r\n\"305B80744DBE4F8020DA288D\",\r\n\"307967AC49FF004037A68611\",\r\n\"301A96768FDAA7002DD5F005\",\r\n\"30B53034E770B5001DFD2BCC\",\r\n\"307A9EA722C9DD802408A5C2\",\r\n\"305ABE3665404EC00EF760F3\",\r\n\"309519F56C9E84C0288941AD\",\r\n\"3030FE2B9F345CC02319DAF8\",\r\n\"3038438104C7E10023FE1ED5\",\r\n\"305A3A828AF96CC0083196C7\",\r\n\"30183B38E5F303401A764C8E\",\r\n\"30A22F962F574C8001C77021\",\r\n\"30DB528A614BEC000F450020\",\r\n\"3060648ABDEAD08035D6E565\",\r\n\"30DB240918C46A002B354B2D\",\r\n\"30C9F44C3CE12CC0064F1284\",\r\n\"3099F3C1D958530017E2C1BE\",\r\n\"3010FE2B9F345CC0194C7745\",\r\n\"301ADD515CB7900007AC0902\",\r\n\"3079B159954302400AC891B0\",\r\n\"309ADD515CB7900010F1B035\",\r\n\"3011371B61A416401A2BA0DA\",\r\n\"30D8D0A357783C002E3DDC7E\",\r\n\"3078D0A357783C000E98ACB9\",\r\n\"30A127C50C4E31C02F743DC3\",\r\n\"30A9F44C3CE12CC003557DE3\",\r\n\"30D47A079E73BD0025A887B4\",\r\n\"3014CA99058DA9400BBD2C00\",\r\n\"30DBA00B091515001379DA86\",\r\n\"30D85E63178BE0401D6A770D\",\r\n\"305B60F9A16785002C45F0F6\",\r\n\"303A9EA722C9DD8004F7E7E7\",\r\n\"3099F8221B8D6B8034E32A37\",\r\n\"309A4169D604AA401A8648A7\",\r\n\"307BA00B0915150036D8C32B\",\r\n\"3075E4C70E27E1801ACFB98C\",\r\n\"300127C50C4E31C0020BFD4F\",\r\n\"3038438104C7E100191DCDF9\",\r\n\"30BB6F989F552640183D8541\",\r\n\"3078DDCA56A475C0093C8C8C\",\r\n\"303A51FC09339D0007460F0B\",\r\n\"30BB26AA444FE940346FBCB7\",\r\n\"306127C50C4E31C02B703CA9\",\r\n\"30DA3DAEC41952803AC48598\",\r\n\"30B80D051232F38037C2BC0E\",\r\n\"309485154F7843C00BAA7775\",\r\n\"305A96768FDAA7000CA8F14A\",\r\n\"307A6135128F9C800AFB1091\",\r\n\"30527B26B2339980098F7685\",\r\n\"3028482E64681EC00268C2D9\",\r\n\"30B6431BEC9057402D89A86B\",\r\n\"30B18641574C7EC00EF9503C\",\r\n\"309B071465493280389B7BCE\",\r\n\"30B47A079E73BD002CBA1D95\",\r\n\"303967AC49FF004035CFCC63\",\r\n\"3031371B61A41640316E2573\",\r\n\"3054E3DB52785800093E8BD8\",\r\n\"30183B38E5F3034035D33795\",\r\n\"30B9556951599F4032E11953\",\r\n\"30D85E63178BE0400CF7497F\",\r\n\"303A6135128F9C802FE55443\",\r\n\"3039B42663AE5740269C7643\",\r\n\"3054AF44388DD000085DD694\",\r\n\"30984BC955EE8FC001EBB63B\",\r\n\"30B5AB5E6DD763402FF13A87\",\r\n\"303A6135128F9C80291CBCF5\",\r\n\"30B5E4C70E27E18015735D57\",\r\n\"30D4AF44388DD000322C1747\",\r\n\"30B47A079E73BD001A8C7E08\",\r\n\"30BA7FB584B355402072D7C5\",\r\n\"30B85E63178BE0400513F79C\",\r\n\"3038438104C7E100175B36CE\",\r\n\"307B28FFD4AAEE802A490DFC\",\r\n\"3054CA99058DA94038CA19C1\",\r\n\"30B8AE5B0D5FC5C00FAA9100\",\r\n\"3098AE5B0D5FC5C039E4B22E\",\r\n\"30D12B940E9505801DCD1472\",\r\n\"30386C20133B278005948222\",\r\n\"30B18641574C7EC010414E91\",\r\n\"30582AE0CCFEE2C02F82EFAD\",\r\n\"3059556951599F401DCA9417\",\r\n\"30DA4169D604AA400E14AD63\",\r\n\"303A9EA722C9DD80386886C7\",\r\n\"3088482E64681EC007C8AB51\",\r\n\"3041B843F74D6C801FA4B9CE\",\r\n\"307ADD515CB7900012FEBEC5\",\r\n\"309A51FC09339D002FE43E55\",\r\n\"30DBC0A090A726400750609B\",\r\n\"30BABE3665404EC035F8997E\",\r\n\"303B528A614BEC0035C436A7\",\r\n\"3099B42663AE574006E0E184\",\r\n\"303BCE94A324790017821C1A\",\r\n\"303A4169D604AA400BDD6D4D\",\r\n\"3034E3DB527858002326ACB6\",\r\n\"301BC0A090A7264020DEEB5C\",\r\n\"30BBC0A090A7264033FCE534\",\r\n\"30153034E770B5001D43666F\",\r\n\"305ABE3665404EC0394DAC1D\",\r\n\"301B60F9A16785000E9E2A0C\",\r\n\"305AE4D248EA4F403B374901\",\r\n\"309A6135128F9C800D2C823D\",\r\n\"301A9EA722C9DD8035F18454\",\r\n\"30512B940E950580227F9019\",\r\n\"305A12CD0BFC06000F56A0C7\",\r\n\"3019B9368A10A6C02D9B93FB\",\r\n\"30D9B159954302401F61BD99\",\r\n\"30D512A5BD57550025E9CC96\",\r\n\"305854DE857BE8C01C8BD1B0\",\r\n\"3018DDCA56A475C02E9C2B79\",\r\n\"30D9556951599F4026B1A5B2\",\r\n\"305B60F9A16785001633C21C\",\r\n\"301A4169D604AA4022555BCA\",\r\n\"309814C72586854039818B55\",\r\n\"3074068B5B0A54C00C11A94C\",\r\n\"30D83B38E5F3034027EE76D2\",\r\n\"303ABE3665404EC0126A59B3\",\r\n\"3079720AA0199C400760D0E3\",\r\n\"30512B940E9505802D111C6D\",\r\n\"309B28FFD4AAEE80110B6348\",\r\n\"30C2CD5EDCD17A40345F316B\",\r\n\"3074E3DB527858002B94D359\",\r\n\"309A12CD0BFC0600325043C9\",\r\n\"301A9EA722C9DD8022E73468\",\r\n\"30BADD515CB790000A296FD8\",\r\n\"30B9F3C1D95853000FFABDC7\",\r\n\"30718641574C7EC011C688CB\",\r\n\"301BCE94A32479002B1E2B6E\",\r\n\"3081B843F74D6C802F103715\",\r\n\"307888C165746B80181165E9\",\r\n\"30DB80744DBE4F8032CC3F6B\",\r\n\"303A4169D604AA402BD96459\",\r\n\"30985E63178BE0402D2D6DDE\",\r\n\"3038438104C7E10027AE77D4\",\r\n\"30347A079E73BD002FCB3980\",\r\n\"30092BFBD3622280111EE4E8\",\r\n\"303A96768FDAA7002498D3D7\",\r\n\"309A26C18FDAD2C02FAEA519\",\r\n\"303519F56C9E84C021D1EAA0\",\r\n\"30D8AE5209D4DC803467DCB3\",\r\n\"3081B843F74D6C8038DB4DF4\",\r\n\"3054068B5B0A54C028D9786E\",\r\n\"309ABE3665404EC00D420F20\",\r\n\"30C8A58CB8D7644000F07367\",\r\n\"3075E4C70E27E18029DAA6A1\",\r\n\"30D86C20133B27801FB14596\",\r\n\"3034E3DB5278580022BB5424\",\r\n\"305ABE3665404EC0007309F5\",\r\n\"303B0714654932802A5AB10F\",\r\n\"30727B26B2339980398EE210\",\r\n\"30780D051232F38034F0B016\",\r\n\"309B747BA58260002C8AAEC2\",\r\n\"309888C165746B801D304307\",\r\n\"305B28FFD4AAEE8012B97D19\",\r\n\"3068482E64681EC02705CE93\",\r\n\"30186A1B4480B88009B77A91\",\r\n\"3078C00944B78C402FFEFC73\",\r\n\"307A03D45DB95380233600DB\",\r\n\"3074E3DB527858002F9DF92C\",\r\n\"30C127C50C4E31C02C000B71\",\r\n\"30B814C72586854007A2CCD6\",\r\n\"30BADD515CB7900012E0D3C1\",\r\n\"3034C3E659C27740324ABC40\",\r\n\"30BA6135128F9C80118D39CE\",\r\n\"30D4AF44388DD0000C6DED21\",\r\n\"30A2CD5EDCD17A400C5BD889\",\r\n\"30394E7216E7D5801776B348\",\r\n\"3094B580169A69C0193ECAE8\",\r\n\"30892BFBD36222801A6C4159\",\r\n\"301967AC49FF00400219EEA8\",\r\n\"3078DDCA56A475C00FAF3F57\",\r\n\"30BA03D45DB9538022D21F36\",\r\n\"30B5E4C70E27E1801A232B42\",\r\n\"30D1371B61A416400D981FDB\",\r\n\"30692B6815768240108682E7\",\r\n\"30892B68157682401AEFB731\",\r\n\"309512A5BD57550011402B18\",\r\n\"3011371B61A4164000B8669E\",\r\n\"303A3BF2D03FF20007EAE247\",\r\n\"303B6F989F55264004C8EFEE\",\r\n\"3058C00944B78C4022521CF2\",\r\n\"30D27B26B233998019C7A1E9\",\r\n\"30D87C1AD40D0EC02FDD8685\",\r\n\"303814C7258685400F0460F3\",\r\n\"305967AC49FF00402F8332DD\",\r\n\"30B4B580169A69C0351475B8\",\r\n\"303A96768FDAA70036EAAAAD\",\r\n\"303A51FC09339D0006736C23\",\r\n\"30B27B26B23399802BCE068B\",\r\n\"3038438104C7E1000ACA72A1\",\r\n\"30DA6135128F9C80187CE60B\",\r\n\"30387C1AD40D0EC028CD3855\",\r\n\"30387C1AD40D0EC03569186C\",\r\n\"3094CA99058DA9403A7DE97D\",\r\n\"30B940331D63428038376B41\",\r\n\"305A03D45DB953802693F3E4\",\r\n\"30D1371B61A416403A68BA0E\",\r\n\"303ADD515CB790002B09B365\",\r\n\"301485154F7843C01F337C2D\",\r\n\"303814C72586854038CA94B7\",\r\n\"307A7FB584B3554020B2BB5B\",\r\n\"3019720AA0199C403892A574\",\r\n\"3055AB5E6DD763401FD877C1\",\r\n\"3059F3C1D9585300392BFE50\",\r\n\"30787C1AD40D0EC00A9E1B24\",\r\n\"3055C42A4688C4401AAE9BC7\",\r\n\"303A7FB584B355401C483F50\",\r\n\"30B5E4C70E27E1802DC811DC\",\r\n\"301B19439420F30032ADDDB6\",\r\n\"30B8438104C7E1002557BD76\",\r\n\"303A3A828AF96CC0397BB390\",\r\n\"30B8325EA2A9DB801A19634E\",\r\n\"30DA7FB584B35540088C7A4D\",\r\n\"305A948F61C1F4800E299D45\",\r\n\"30BA7FB584B355402FDBBB05\",\r\n\"3015C42A4688C44013052A21\",\r\n\"303B6F989F55264021F0D61E\",\r\n\"3050014B6DD556C00188322D\",\r\n\"3070DA337B28EE00278AD5BA\",\r\n\"3038438104C7E1001DEEFF86\",\r\n\"3059DA62D45E63C00131ED9D\",\r\n\"3074AF44388DD0000071F088\",\r\n\"30DBC0A090A7264036CB9613\",\r\n\"3038438104C7E10031D64938\",\r\n\"309B6F989F5526400134FE20\",\r\n\"30D888C165746B80034E5ADB\",\r\n\"306978650303DB4017FA4AA3\",\r\n\"3016431BEC9057401A58E85B\",\r\n\"30394E7216E7D5800D2B0492\",\r\n\"3010FE2B9F345CC00DDD31EF\",\r\n\"307B241D50C6B0002626B40D\",\r\n\"307BC0A090A726402E512A05\",\r\n\"3039F8221B8D6B80225AA24D\",\r\n\"309A51FC09339D001F97FA3C\",\r\n\"30980D051232F380308D1EF0\",\r\n\"309A948F61C1F4803B5B22B2\",\r\n\"3095AB5E6DD7634033BA64F2\",\r\n\"3079720AA0199C402476CE34\",\r\n\"30D517D71E977B401E0FD0CA\",\r\n\"303A9EA722C9DD800C149409\",\r\n\"3099720AA0199C40188A9E11\",\r\n\"30584BC955EE8FC007C95870\",\r\n\"305B19439420F30014D85FD2\",\r\n\"3058DDCA56A475C00A085D22\",\r\n\"30A9F44C3CE12CC01AB50FAA\",\r\n\"3098C00944B78C402DE4D358\",\r\n\"3098AE5B0D5FC5C024F731CF\",\r\n\"309BCE94A32479000E3F055F\",\r\n\"30D888C165746B802AD9CCF7\",\r\n\"30C2CD5EDCD17A4031E9173A\",\r\n\"3014AF44388DD00033097536\",\r\n\"30DB6F989F5526402342F445\",\r\n\"3019B9368A10A6C016BEE6F8\",\r\n\"3059A29ADD10DE80158FDE71\",\r\n\"30D8D0A357783C003172866A\",\r\n\"305B26AA444FE940304E1E2C\",\r\n\"301ADD515CB790000251AC41\",\r\n\"3014AF44388DD000303F83C6\",\r\n\"305B60F9A167850009100840\",\r\n\"30A92BFBD36222800933B66F\",\r\n\"305BCE94A32479003A34C8F3\",\r\n\"30D9A29ADD10DE803786AE15\",\r\n\"30D5AB5E6DD7634025C3122A\",\r\n\"301ABE3665404EC00DB973B3\",\r\n\"30D967AC49FF00402E0C86B1\",\r\n\"3038438104C7E1002E94AC70\",\r\n\"30D4068B5B0A54C012D7C39C\",\r\n\"30B0FE2B9F345CC025D347D7\",\r\n\"3038438104C7E100218129C5\",\r\n\"303A26C18FDAD2C006D014B7\",\r\n\"3019B1599543024004F1403D\",\r\n\"307A3DAEC4195280331E95F0\",\r\n\"30DAE4D248EA4F4008876965\",\r\n\"30A0648ABDEAD08031AFF573\",\r\n\"309512A5BD5755000AE67785\",\r\n\"3038438104C7E10024CA17A3\",\r\n\"305B19439420F300055872E1\",\r\n\"30A8A58CB8D7644036994844\",\r\n\"30947A079E73BD000603DA2C\",\r\n\"30DB528A614BEC001181A8E3\",\r\n\"30C8A58CB8D764401FF4993A\",\r\n\"3098C00944B78C401BB0F105\",\r\n\"30994E7216E7D5802ABD39F2\",\r\n\"30DA3A828AF96CC00933A42E\",\r\n\"3094AF44388DD00031AF44C7\",\r\n\"3039B42663AE57403074B5FE\",\r\n\"309AE4D248EA4F4033D038CE\",\r\n\"30BA9EA722C9DD8033D85184\",\r\n\"301A948F61C1F480262295ED\",\r\n\"309B528A614BEC0034BC2FA0\",\r\n\"30B8C00944B78C401DC2CEF0\",\r\n\"30DA948F61C1F48034263D2A\",\r\n\"30D9F8221B8D6B80089BA3E4\",\r\n\"3038438104C7E10024E1F49A\",\r\n\"3014068B5B0A54C005AB2909\",\r\n\"301854DE857BE8C01847C178\",\r\n\"3016431BEC9057401A032133\",\r\n\"30D84BC955EE8FC0349927D7\",\r\n\"30DBCE94A32479002BB64A27\",\r\n\"305AE4D248EA4F402363527C\",\r\n\"3071371B61A4164037B94FE5\",\r\n\"30D5C42A4688C44015834353\",\r\n\"3039A29ADD10DE803570EE54\",\r\n\"30382AE0CCFEE2C00A447043\",\r\n\"30022F962F574C801D9CC8D3\",\r\n\"30997CDDE2F208803113BEB2\",\r\n\"30BBCE94A3247900047CC148\",\r\n\"30B8AE5B0D5FC5C02FD031E3\",\r\n\"3019720AA0199C402BED3B49\",\r\n\"30D82AE0CCFEE2C01A67665D\",\r\n\"3099F8221B8D6B802BD22FF6\",\r\n\"3098D0A357783C00100A1190\",\r\n\"307519F56C9E84C01D19284C\",\r\n\"301A9EA722C9DD802BD8B814\",\r\n\"30292B681576824005599EC0\",\r\n\"30382AE0CCFEE2C0043FDB43\",\r\n\"309BADE3CD61FB000F00A943\",\r\n\"30C9F44C3CE12CC03AB4443D\",\r\n\"30B4E3DB527858000038BA31\",\r\n\"30D4B580169A69C0040D805D\",\r\n\"30547A079E73BD002CB6F78E\",\r\n\"305BA00B091515000D3DA2E8\",\r\n\"30B9556951599F402B936954\",\r\n\"305A9EA722C9DD803752BC71\",\r\n\"3018AE5B0D5FC5C021B39E65\",\r\n\"305967AC49FF00403B65300E\",\r\n\"30B84BC955EE8FC021576147\",\r\n\"305517D71E977B4001450C7C\",\r\n\"30DB528A614BEC0016BFF8DF\",\r\n\"30D8AE5209D4DC8016955996\",\r\n\"3099556951599F401BAE57A9\",\r\n\"3094CA99058DA9400726323A\",\r\n\"30DB1BC6D36B93C00422680D\",\r\n\"30A1B843F74D6C80145E2836\",\r\n\"3038D0A357783C0034B27714\",\r\n\"308127C50C4E31C00E6EE904\",\r\n\"30594E7216E7D5802C4DA64E\",\r\n\"3034068B5B0A54C008DED3D1\",\r\n\"30BB28FFD4AAEE803B2E4EDF\",\r\n\"30DB05089607B2C02D0A2B94\",\r\n\"30D888C165746B801537EC02\",\r\n\"3080648ABDEAD080010DA1E4\",\r\n\"305A26C18FDAD2C03A44797A\",\r\n\"303B07146549328037E50C41\",\r\n\"30HB747BA582600005AE9068\",\r\n\"30D86A1B4480B88021FA1B5A\",\r\n\"307485154F7843C00512C2CD\",\r\n\"307A03D45DB9538035761EC3\",\r\n\"307A9EA722C9DD8031A3AB6D\",\r\n\"307B747BA5826000247F21D6\",\r\n\"30B4B580169A69C02FB523F3\",\r\n\"30B9F3C1D95853003B0D7BAA\",\r\n\"30584BC955EE8FC020C3B0BD\",\r\n\"3029F44C3CE12CC01DB798F0\",\r\n\"30DADD515CB7900020ABD45B\",\r\n\"30B940331D63428021079580\",\r\n\"30553034E770B5000DC14F18\",\r\n\"30BB747BA582600035AE5828\",\r\n\"30DB28FFD4AAEE803074BCEF\",\r\n\"305B80744DBE4F8007596EBC\",\r\n\"303B528A614BEC0021B47511\",\r\n\"301A12CD0BFC06003A9E7A28\",\r\n\"30B9F3C1D95853000D570861\",\r\n\"3014AF44388DD0001F65AFA0\",\r\n\"3078AE5209D4DC801F83BC08\",\r\n\"30B6431BEC9057402144F52B\",\r\n\"303B1BC6D36B93C030D09F56\",\r\n\"307ABE3665404EC00E6DD9B3\",\r\n\"30D9B42663AE57402BA5D5AD\",\r\n\"308978650303DB403A40094D\",\r\n\"305B240918C46A0021142030\",\r\n\"301940331D6342800149AEF9\",\r\n\"3090DA337B28EE00193DA882\",\r\n\"309BA00B091515002C2A8A81\",\r\n\"3028A58CB8D76440164793EE\",\r\n\"30D18641574C7EC029220376\",\r\n\"30D1371B61A41640375121DA\",\r\n\"3070014B6DD556C03342B9EF\",\r\n\"301AE4D248EA4F400ED63BDA\",\r\n\"305A7FB584B3554028CA1A79\",\r\n\"307B747BA58260002518CC96\",\r\n\"3001B843F74D6C80351396E7\",\r\n\"30553034E770B50004EF2A93\",\r\n\"309A3A828AF96CC00DEB19B6\",\r\n\"309A6135128F9C800F117C19\",\r\n\"30D86A1B4480B88035FB58BC\",\r\n\"30DA12CD0BFC060007AC8FD2\",\r\n\"3091371B61A416400225CCE9\",\r\n\"3029F44C3CE12CC02487F93F\",\r\n\"3090FE2B9F345CC00C3234CE\",\r\n\"305A03D45DB9538035F030C1\",\r\n\"303A6135128F9C8012E981F1\",\r\n\"30384BC955EE8FC00D658B00\",\r\n\"30BA3DAEC4195280310F1826\",\r\n\"301BC0A090A7264022C30D01\",\r\n\"3058325EA2A9DB800C6ED957\",\r\n\"3060648ABDEAD08029B6E6B2\",\r\n\"30B87C1AD40D0EC01175D053\",\r\n\"30BA12CD0BFC06002EE05D9B\",\r\n\"307ADD515CB7900036781FE7\",\r\n\"30986C20133B278024AF50A9\",\r\n\"30D8AE5209D4DC802EF9F350\",\r\n\"30794E7216E7D5802FF09580\",\r\n\"307A51FC09339D002BA67A10\",\r\n\"3078AE5B0D5FC5C00959770B\",\r\n\"30C8482E64681EC016997904\",\r\n\"30197CDDE2F208800F62A67B\",\r\n\"30DB1BC6D36B93C02746E51F\",\r\n\"30D84BC955EE8FC01CF67889\",\r\n\"3038438104C7E1003001F9F7\",\r\n\"3035E4C70E27E1802AE3FB4D\",\r\n\"3054068B5B0A54C00FA7CB8C\",\r\n\"30D8D0A357783C0021226062\",\r\n\"30A978650303DB40061D85EF\",\r\n\"3062C7FD845E350014AE8787\",\r\n\"30BB1BC6D36B93C003F05ADF\",\r\n\"304978650303DB40069E9B70\",\r\n\"3038438104C7E1002D98D14E\",\r\n\"305B0714654932802C0ADDB1\",\r\n\"305B1BC6D36B93C01553F970\",\r\n\"3038AE5209D4DC800B8AACFA\",\r\n\"308978650303DB40084277F9\",\r\n\"305B05089607B2C007A1F41C\",\r\n\"3038438104C7E1001C34721E\",\r\n\"3038438104C7E1000506957C\",\r\n\"3078DDCA56A475C013C21BD4\",\r\n\"303A03D45DB953801560156F\",\r\n\"30B85E63178BE0403A7093E1\",\r\n\"301B6F989F55264037FCFC35\",\r\n\"30918641574C7EC02650C1E9\",\r\n\"303940331D6342801F0FD45C\",\r\n\"3060648ABDEAD0801AE2EE42\",\r\n\"3095AB5E6DD763401C90CCF8\",\r\n\"3098325EA2A9DB80376692FE\",\r\n\"30BB80744DBE4F8015783C3A\",\r\n\"30582AE0CCFEE2C02AD3C101\",\r\n\"30718641574C7EC00C69B399\",\r\n\"309B747BA5826000143BD25E\",\r\n\"30BB1BC6D36B93C03920AF08\",\r\n\"30D86A1B4480B88037765638\",\r\n\"307B07146549328020113C6D\",\r\n\"30C8482E64681EC02E4C84DD\",\r\n\"3038438104C7E100103FFBB8\",\r\n\"3054B580169A69C017F0FE5D\",\r\n\"309967AC49FF00401F647177\",\r\n\"3035AB5E6DD763402E606883\",\r\n\"30DA96768FDAA700006B5EB7\",\r\n\"385B26AA444FE94027CE82A8\",\r\n\"309B19439420F3001BE10B6B\",\r\n\"307BCE94A32479003272D079\",\r\n\"30BABE3665404EC03476EF86\",\r\n\"305B60F9A1678500026053E4\",\r\n\"30C127C50C4E31C03568239E\",\r\n\"30DA948F61C1F4801753DF74\",\r\n\"3021B843F74D6C8000120DE7\",\r\n\"307854DE857BE8C001447344\",\r\n\"301A12CD0BFC060031B8BEC7\",\r\n\"3094068B5B0A54C02567A5E0\",\r\n\"30DA9EA722C9DD801584BDFC\",\r\n\"30D814C7258685401C1FCEBD\",\r\n\"30B86C20133B27800A282091\",\r\n\"3098C00944B78C4007CFB1C6\",\r\n\"30386C20133B278002DAE49B\",\r\n\"30D9B9368A10A6C01B739270\",\r\n\"3038438104C7E1002E7C1B5D\",\r\n\"3308482E64681EC015DE3B31\",\r\n\"30BA4169D604AA40029F5190\",\r\n\"30187C1AD40D0EC03B03C32D\",\r\n\"307A3DAEC41952801931E4F1\"\r\n]}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Inventory",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Inventory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get report",
+			"item": [
+				{
+					"name": "get-grouped-product-items",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Inventory",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Inventory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post erroneous data",
+			"item": [
+				{
+					"name": "Insert product - defective1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":\"abc\",\"companyName\":\"Mertz, O'Conner and Heaney\",\"itemReference\":21526,\"productName\":\"Fruit Mix - Light\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product - defective2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":4584903,\"companyName\":\"Heller, Koepp and Powlowski\",\"itemReference\":\"abc\",\"productName\":\"Beer - Camerons Cream Ale\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product - defective3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":686748,\"companyName\":111,\"itemReference\":9119606,\"productName\":\"Cheese - Grie Des Champ\"}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert product - defective4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyPrefix\":591271,\"companyName\":\"Lakin, Prosacco and Terry\",\"itemReference\":5771945,\"productName\":111}"
+						},
+						"url": {
+							"raw": "https://productinventoryapi.azurewebsites.net/api/Product",
+							"protocol": "https",
+							"host": [
+								"productinventoryapi.azurewebsites.net"
+							],
+							
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
