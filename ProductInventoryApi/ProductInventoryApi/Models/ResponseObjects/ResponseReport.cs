@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using ProductInventoryApi.Models.ResponseObjects.Reports;
+using System.Collections.Generic;
 
 namespace ProductInventoryApi.Models.ResponseObjects
 {
     public class ResponseReport
     {
-        public List<VCountOfInventoriedItemsGroupedBySpecificProductForSpecificInventory> ItemsGroupedBySpecificProductForSpecificInventories { get; set; }
+        public List<InventoriedItemsGroupedBySpecificProductForSpecificInventory> InventoriedItemsGroupedBySpecificProductForSpecificInventoryList { get; set; }
 
-        public List<VCountOfInventoriedItemsGroupedBySpecificProductPerDay> ItemsGroupedBySpecificProductPerDays { get; set; }
+        public List<InventoriedItemsGroupedBySpecificProductPerDay> InventoriedItemsGroupedBySpecificProductPerDayList { get; set; }
 
-        public List<VCountOfInventoriedItemsGroupedBySpecificCompany> ItemsGroupedBySpecificCompanies { get; set; }
+        public List<CompanyWithProductItemsCount> InventoriedItemsGroupedBySpecificCompanyList { get; set; }
     }
 }

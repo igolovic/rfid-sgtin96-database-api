@@ -13,6 +13,7 @@ using ProductInventoryApi.Sgtin;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using ProductInventoryApi.Models.ResponseObjects.Reports;
 
 namespace ProductInventoryApi.Controllers
 {
@@ -56,11 +57,48 @@ namespace ProductInventoryApi.Controllers
                                                       orderby row.CountOfProductItems descending
                                                       select row;
 
-                var resultData = new ResponseReport
+                var reportItemsGroupedBySpecificProductForSpecificInventories =
+                    (from i in itemsGroupedBySpecificProductForSpecificInventories.ToList()
+                    group i by i.InventoryId into g
+                    select new InventoriedItemsGroupedBySpecificProductForSpecificInventory
+                    {
+                        InventoryId = g.Key,
+                        ProductWithProductItemsCountList = g.Select(i => new ProductWithProductItemsCount
+                        {
+                            ProductName = i.ProductName,
+                            ProductItemsCount = i.CountOfProductItems ?? 0
+                        }).ToList()
+                    })
+                    .ToList();
+
+                var reportItemsGroupedBySpecificProductPerDays =
+                    (from i in itemsGroupedBySpecificProductPerDays.ToList()
+                     group i by i.InventoryDate into g
+                     select new InventoriedItemsGroupedBySpecificProductPerDay
+                     {
+                         Date = g.Key,
+                         ProductWithProductItemsCountList = g.Select(i => new ProductWithProductItemsCount
+                         {
+                             ProductName = i.ProductName,
+                             ProductItemsCount = i.CountOfProductItems ?? 0
+                         }).ToList()
+                     })
+                    .ToList();
+
+                var reportItemsGroupedBySpecificCompanies =
+                    (from i in itemsGroupedBySpecificCompanies.ToList()
+                     select new CompanyWithProductItemsCount
+                     {
+                         CountryName = i.CompanyName,
+                         ProdcutItemsCount = i.CountOfProductItems ?? 0
+                     })
+                    .ToList();
+
+                ResponseReport resultData = new ResponseReport
                 {
-                    ItemsGroupedBySpecificProductForSpecificInventories = itemsGroupedBySpecificProductForSpecificInventories.ToList(),
-                    ItemsGroupedBySpecificProductPerDays = itemsGroupedBySpecificProductPerDays.ToList(),
-                    ItemsGroupedBySpecificCompanies = itemsGroupedBySpecificCompanies.ToList()
+                    InventoriedItemsGroupedBySpecificProductForSpecificInventoryList = reportItemsGroupedBySpecificProductForSpecificInventories,
+                    InventoriedItemsGroupedBySpecificProductPerDayList = reportItemsGroupedBySpecificProductPerDays,
+                    InventoriedItemsGroupedBySpecificCompanyList = reportItemsGroupedBySpecificCompanies
                 };
 
                 return resultData;
