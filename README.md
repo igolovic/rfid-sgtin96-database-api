@@ -7,8 +7,8 @@ It is a RESTful web API implemented in NET framework 5. Backend server-side C# c
 POST handler methods parse sent data and populate (insert/update) records into Sql Server or Azure SQL database. 
 GET handler method returns report with counts of number of product items grouped by several conditions. 
 In backend there is a normalized SQL database in which verified data is written. Project contains both Sql Server and Azure SQL database creation scripts and can be run completely on-premise in IIS or it can be deployed to Azure and use Azure SQL.
-
-
+   
+   
 **General description of workflow**
 
 Web application receives data in form of JSON and deserializes it into classes. Since product and company data is only inserted, this data is only checked to see if it already exists in database. If it doesn't already exist in database it is inserted.
@@ -22,8 +22,8 @@ Processing of POST inventory request:
     - if it does this request is treated as update of existing inventory-date-location and product item records (parsed from RFID tags). Product items decoded from request are treated as "new" data while product items already existing in database are treated as "old" data:
       - product items decoded from request that don't exist in database are inserted into database
       - product items that exist in database but don't exist in product items decoded from request are deleted from database
-
-
+   
+   
 **Web API controllers and method descriptions**
 
 Web API methods are:
@@ -38,16 +38,16 @@ Web API methods are:
     - inventory-date-location into InventoryDateLocation
     - product item records into ProductItem - records are parsed from RFID hexadecimal tags with SGTIN-96 encoded data (company-prefix, item-reference, serial number of product item)
   - GET method to return report with product item counts grouped by several conditions 
-
-
+   
+   
 **Relational database model**
 
 Database contains tables used to store received data and helps enforce business logic through unique keys. Referential integrity is kept using foreign keys. Views are used in reports.
 Project contains both Sql Server and Azure SQL database definition SQL script so that database can be created on both platforms.
 
 ![image](data-model.png)
-
-
+   
+   
 **Testing**
 
 For testing of web API methods Postman scripts are available (in two version, one with localhost URLs, other with Azure URL):
@@ -57,7 +57,8 @@ For testing of web API methods Postman scripts are available (in two version, on
 - few defective POST request to test error reporting
 
 There is a unit test that tests parser that parses hexadecimal RFID tags as SGTIN-96 binary representation and retrieves product item data.
-
+   
+   
 **Setup, configuration and testing of project with on-premise Sql Server**
 
 - get source code from GIT branch azure, restore nuget packages, build solution
@@ -66,7 +67,8 @@ There is a unit test that tests parser that parses hexadecimal RFID tags as SGTI
 - adjust connection strings in appsettings.json files in project
 - into Postman application insert request collection JSON file for localhost available in project
 - in Postman run prepared requests that populate database data
-
+   
+   
 **Setup, configuration and testing of project in Azure**
 
 - get source code from GIT branch azure, restore nuget packages, build solution
