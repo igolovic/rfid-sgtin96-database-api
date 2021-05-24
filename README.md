@@ -63,7 +63,7 @@ There is a unit test that tests parser that parses hexadecimal RFID tags as SGTI
 
 - get source code from GIT branch azure, restore nuget packages, build solution
 - remove eventual Azure publish changes that might come in a way of using local Sql Server instance (currently main branch is modified to deploy to Azure)
-- use SQL script to create database objects in Sql Server
+- in Sql Server Mnagement Studio run SQL script to create database named "ProductInventoryApi_db" and database objects in Sql Server
 - adjust connection strings in appsettings.json files in project
 - into Postman application insert request collection JSON file for localhost available in project
 - in Postman run prepared requests that populate database data
@@ -73,7 +73,8 @@ There is a unit test that tests parser that parses hexadecimal RFID tags as SGTI
 
 - get source code from GIT branch azure, restore nuget packages, build solution
 - in Azure create App Service and Azure SQL server and database wih same name as in project
-- use SQL script to create database objects in Azure SQL (Sql Server Management Studio can connect to Azure SQL server/database)
+- create database named "ProductInventoryApi_db" through user interface
+- on database "ProductInventoryApi_db" run SQL script to create database objects in Azure SQL
 - run Publish and create connection strings and setup Key Vault on Azure to store connecion strings safely
 - into Postman application insert request collection JSON file for Azure available in project
 - in Postman run prepared requests that populate database data
