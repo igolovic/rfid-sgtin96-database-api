@@ -52,15 +52,16 @@ Project contains both Sql Server and Azure SQL database definition SQL script so
    
 **Testing**
 
-For testing of web API methods Postman scripts are available (in two version, one with localhost URLs, other with Azure URL):
-- 100 POST requests that result in adding of company and product record
-- POST request with 1000 RFID tags with encoded SGTIN-96 data translated into product items and related in database with existing company and product (most tags are corect and few are erroneous)
-- GET request to retrieve report
-- few defective POST request to test error reporting
+For testing of web API methods Postman scripts are available (in two versions, one with localhost URLs, other with Azure URL):
+- 100 POST requests that result in adding of company and product record (**"Insert all products"**)
+- POST request with 1000 RFID tags with encoded SGTIN-96 data translated into product items and related in database with existing company and product - most tags are correct and few are erroneous (**"Insert inventory and tags"**)
+- GET request to retrieve report (**"Get report"**)
+- few defective POST request to test error reporting (**"Post erroneous data"**)
 
 There is a unit test that tests parser that parses hexadecimal RFID tags as SGTIN-96 binary representation and retrieves product item data.
 
 Swagger interface exists and can be reached through /swagger/index.html URL, e.g. https://localhost:44303/swagger/index.html or in Azure https://<app_service_name>.azurewebsites.net/swagger/index.html
+   
    
 **Setup, configuration and testing of project with on-premise Sql Server**
 
