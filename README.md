@@ -2,9 +2,10 @@
 
 **High-level overview**   
 
-Application receives company and product data, as well as the hexadecimal RFID tags that contain SGTIN-96 encoded product items that are inserted into database and related to company and product. 
-It is a RESTful web API implemented in NET framework 5. Backend server-side C# code in form of web API methods handles POST and GET requests.
-POST handler methods parse sent data and populate (insert/update) records into Sql Server or Azure SQL database. 
+This RESTful web API application receives company and product data using JSON as format, while product items are encoded using RFID and SGTIN-96 standards, it parses the data and stores it in SQL database, it gives reports on product item count for product items stored in SQL database.
+Product items are received in JSON requests in form of hexadecimal RFID tags that contain SGTIN-96 encoded product items. Items are parsed and inserted into database and related to company and product. 
+Technology used is .NET framework 5. Backend server-side C# code in form of web API methods handles POST and GET requests.
+POST handler methods parse received data and populate (insert/update) records into Sql Server or Azure SQL database. 
 GET handler method returns report with counts of number of product items grouped by several conditions. 
 In backend there is a normalized SQL database in which verified data is written. Project contains both Sql Server and Azure SQL database creation scripts and can be run completely on-premise in IIS or it can be deployed to Azure and use Azure SQL.
    
@@ -57,7 +58,8 @@ For testing of web API methods Postman scripts are available (in two version, on
 - few defective POST request to test error reporting
 
 There is a unit test that tests parser that parses hexadecimal RFID tags as SGTIN-96 binary representation and retrieves product item data.
-   
+
+Swagger interface exists and can be reached through /swagger/index.html URL, e.g. https://localhost:44303/swagger/index.html or in Azure https://<app_service_name>.azurewebsites.net/swagger/index.html
    
 **Setup, configuration and testing of project with on-premise Sql Server**
 
