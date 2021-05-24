@@ -2,11 +2,12 @@
 
 **High-level overview**   
 
-This RESTful web API application receives company and product data using JSON as format, while product items are encoded using RFID and SGTIN-96 standards, it parses the data and stores it in SQL database, it gives reports on product item count for product items stored in SQL database.
-Product items are received in JSON requests in form of hexadecimal RFID tags that contain SGTIN-96 encoded product items. Items are parsed and inserted into database and related to company and product. 
-Technology used is .NET framework 5. Backend server-side C# code in form of web API methods handles POST and GET requests.
-POST handler methods parse received data and populate (insert/update) records into Sql Server or Azure SQL database. 
-GET handler method returns report with counts of number of product items grouped by several conditions. 
+This RESTful web API application receives company and product data using JSON as format, product items are encoded using RFID and SGTIN-96 standards, it parses the data and stores it in SQL database, it gives reports on product item count for product items stored in SQL database.   
+Product items are received in JSON requests in form of hexadecimal RFID tags that contain SGTIN-96 encoded product items. Items are parsed and inserted into database and related to company and product.    
+
+Technology used is .NET framework 5. Backend server-side C# code in form of web API methods handles POST and GET requests.   
+POST handler methods parse received data and populate (insert/update) records into Sql Server or Azure SQL database.   
+GET handler method returns report with counts of number of product items grouped by several conditions.    
 In backend there is a normalized SQL database in which verified data is written. Project contains both Sql Server and Azure SQL database creation scripts and can be run completely on-premise in IIS or it can be deployed to Azure and use Azure SQL.
    
    
