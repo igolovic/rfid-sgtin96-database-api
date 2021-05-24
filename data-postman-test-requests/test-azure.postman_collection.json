@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "45d91c30-bf8c-4260-ab30-22c2b3511101",
-		"name": "rfid-sgtin16-database-api",
+		"name": "rfid-sgtin16-db-api-azure",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
