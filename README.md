@@ -1,8 +1,12 @@
 # rfid-sgtin96-database-api
 
 **High-level overview**   
+   
+This project is a RESTful web API application which:   
+- receives company and product data using JSON as format with product items encoded using RFID and SGTIN-96 standards   
+- parses data and stores it in normalized SQL database   
+- gives reports on product item count for product items stored in SQL database   
 
-This RESTful web API application receives company and product data using JSON as format, product items are encoded using RFID and SGTIN-96 standards, it parses the data and stores it in SQL database, it gives reports on product item count for product items stored in SQL database.   
 Product items are received in JSON requests in form of hexadecimal RFID tags that contain SGTIN-96 encoded product items. Items are parsed and inserted into database and related to company and product.    
 
 Technology used is .NET framework 5. Backend server-side C# code in form of web API methods handles POST and GET requests.   
